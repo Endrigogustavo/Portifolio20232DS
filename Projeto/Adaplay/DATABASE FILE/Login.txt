@@ -1,0 +1,4 @@
+Para acessar a página do administador, utilize as credencias abaixo:
+
+Username: admin@mail.com
+Password: Password@123

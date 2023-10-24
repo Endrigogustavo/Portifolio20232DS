@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/*https://www.flaticon.com/free-icon/camera_685655?term=photo&page=1&position=1&related_item_id=685655*/
+
+
+
+/*https://www.flaticon.com/free-icon/camera_685655?term=photo&page=1&position=1&related_item_id=685655*/
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.max-width {
+    max-width: 500px;
+    width: 100%;
+}
+
+#imgPhoto {
+    margin-top: 10%;
+    width: 200px;
+    height: 200px;
+    padding:10px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+#imgPhoto:hover{
+    background-color: rgb(180, 180, 180);
+    border: 2px solid #c5c5c5;
+}
+
+
+.containerrr{
+    background-color: #EBEBEB;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1000px;
+    top: 10px;
+}
+
+.containerrr p{
+    font-size: 3vh;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.containerrr span{
+    font-size: 12px;
+}
+
+.containerrr a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.containerrr .cadastar{
+    background-color: #ff7f32;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.containerrr button{
+    background-color: #ff7f32;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.containerrr button.hiddenn{
+    background-color: transparent;
+    border-color: #EBEBEB;
+}
+
+.containerrr button.hiddenn2{
+    border-color: #EBEBEB;
+}
+
+.containerrr form{
+    background-color: #EBEBEB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.containerrr input{
+    background-color: #f2f2f2;
+    border: none;
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 70%;
+    outline: none;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.containerrr.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.containerrr.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons{
+    margin: 20px 0;
+}
+
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.containerrr.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #ff7f32;
+    height: 100%;
+    background: linear-gradient(to right, #ff904b, #ff7f32);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.containerrr.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.Img-fun1{
+    height: 45%;
+    opacity: 0.4;
+    filter: alpha(opacity=40)
+}
+
+.Img-fun1:hover{
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    transition: 300ms linear; 
+}
+
+.Img-fun2{
+    height: 45%;
+    opacity: 0.4;
+    filter: alpha(opacity=40)
+}
+
+.Img-fun2:hover{
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    transition: 300ms linear; 
+}
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.containerrr.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.containerrr.active .toggle-right{
+    transform: translateX(200%);
+}
+form .showBtn{
+    position: absolute;
+    right: 38%;
+    top: 50%;
+    transform: translateY(-45%);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #171923;
+    display: none;
+  }
+
+  
+
+form .indicator{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    display: none;
+  }
+  
+  form .indicator span{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  form .indicator span.medio{
+    margin: 0 3px;
+  }
+  
+  form .indicator span::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6c63ff;
+    border-radius: 5px;
+  }
+  
+  form .indicator span.active.fraco::before{
+    background-color: #ff4757;
+  }
+  
+  form .indicator span.active.medio::before{
+    background-color: orange;
+  }
+  
+  form .indicator span.active.forte::before{
+    background-color: #23ad5c;
+  }
+  
+  form .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    display:none;
+  }
+  
+  form .text.fraco{
+    color:#ff4757;
+  }
+  
+  form .text.medio{
+    color:orange;
+  }
+  
+  form .text.forte{
+    color:#23ad5c;
+  }

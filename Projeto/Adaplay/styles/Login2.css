@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+    height: 100vh;
+  background: linear-gradient(#ff3300, rgba(255, 115, 0, 0.836));
+  clip-path: circle(30% at right 80%);
+  z-index: -1;
+  
+  }
+  body::after{
+      content:'';
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height: 100%;
+      background: linear-gradient(#ee3902,#ff6600);
+      clip-path: circle(20% at 10% 10%);
+      z-index: -1;
+  }
+
+.box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Caixa de Login */
+.caixa-Login {
+    margin-top: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 600px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #e4e4e4;
+    font: bold 2em 'Century Gothic';
+    text-transform: uppercase;
+  
+  }
+  
+  .caixa-Login::before, .caixa-Login::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(45deg,#ff3300,#d14403,#e9810b);
+    background-size:300%;
+    border-radius: 8px;
+    animation: AnimarBorda 8s linear infinite;
+  }
+  
+  
+  @keyframes AnimarBorda{
+    0%{
+  background-position: 0;
+    }
+    100%{
+        background-position: 300%;
+    }
+  }
+  .caixa-Login::after{
+    filter:blur(50px);
+  }
+  
+  .caixa-Login .form-group,
+  .caixa-registro .form-group{
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+  }
+  
+  .caixa-Login h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .caixa-Login .form-group{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #e4e4e4;
+    margin: 30px 0;
+  }
+  
+  
+  .caixa-Login a{
+    margin-top: 20px;
+    width: 350px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    padding-right: 28px;
+    text-decoration: none;
+  }
+  /* Inputs login e registro */
+
+ 
+  .form-group input {
+    width: 350px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    padding-right: 28px;
+  }
+  .form-group input:focus {
+    background-color: #f0f0f0; 
+    color: #000000; 
+}
+  
+  .form-group label {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s ease;
+    color: #ffffff; 
+    transform-origin: 0 0;
+}
+
+.form-group:hover label {
+    color: #d1ac07; 
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group:focus-within label,
+.form-group input:placeholder-shown ~ label {
+    top: -20px; 
+   
+}
+  
+ 
+  
+  
+  /* Botão entrar */
+  .btn {
+    margin-top: 30px;
+    font-family: inherit;
+    height: 50px;
+    background: #e4750d;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Distribui igualmente o espaço entre os botões */
+  }
+  
+  .btn::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #dd0909 0%, #dd5506 100%);
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+  
+  .btn:hover::before {
+    width: 100%;
+    color: chartreuse;
+  }
+  
+  
+  .btn1,
+  .btn2 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    margin-left: -350px;
+    margin-top: 60px;
+    
+  }
+  
+ 
+
+  .registro a{
+    margin-top: 3%;
+    width: 350px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 500;
+    padding-right: 28px;
+    text-decoration: none;
+  }
+
+  
+@media (max-width: 768px) {
+    .container {
+      width: 90%;
+      
+    }
+  
+    .container .content {
+      width: 100%;
+    }
+  
+    .logreg-box .caixa-Login,
+    .logreg-box .caixa-registro {
+     
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 600px;
+        background:#151320;
+       
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        color: #e4e4e4;
+        font: bold 2em 'Century Gothic';
+        text-transform: uppercase;
+        
+  margin-top: 30px;
+      
+      
+    }
+  
+    .logreg-box.active .caixa-Login,
+    .logreg-box.active .caixa-registro {
+      transform: translateX(0);
+    }
+    
+  }

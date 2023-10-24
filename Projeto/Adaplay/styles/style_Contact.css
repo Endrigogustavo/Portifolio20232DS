@@ -1,0 +1,130 @@
+/* GLOBAL */
+* {
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+:root {
+    --title-font: "Poppins", sans-serif;
+    --body-font: "DM Sans", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font: 700 1.8rem var(--title-font);
+    color: #ff7f32;
+}
+
+
+
+
+/* FORM */
+.form_contact {
+    padding-top: 2rem;
+}
+
+
+/* BUTTONS */
+.btn.btn-success.btn-lg {
+    color: #ffffff;
+}
+
+.btn.btn-success.btn-lg:hover {
+    background-color: #11111f;
+    transition: ease-in-out 1s;
+    border-color: #ff7f32;
+}
+
+a.btn {
+    margin: 5px 5px;
+}
+
+#btn_sub {
+    float: right;
+}
+
+.btn_view.hidden {
+    display: none;
+}
+
+.btn_hidden.hidden {
+    display: none;
+}
+
+/* LIST */
+#lista_contato.hidden {
+    display: none;
+}
+.table td,
+.table th {
+    text-align: left;
+    vertical-align: middle;
+    padding: 0.5rem;
+    background-color: #ffffff;
+}
+
+td.btn_list {
+    text-align: center;
+}
+
+/* ALERT */
+
+.aviso {
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.aviso h5 {
+    font-weight: 700;
+}
+
+.aviso img {
+    margin-right: 0.5rem;
+    width: 2.5rem;
+}
+
+
+/*DADADA*/
+
+
+/* INPUT */
+.form-control.name {
+    background: url(../images/User.svg) no-repeat scroll 5px 5px ;
+    background-color: white;
+    padding-left: 2.2rem;
+    
+}
+
+.form-control.email {
+    background: url(../images/Mail.svg) no-repeat scroll 5px 5px;
+    background-color: white;
+    padding-left: 2.2rem;
+}
+
+.form-control.phone {
+    background: url(../images/Phone.svg) no-repeat scroll 5px 5px;
+    background-color: white;
+    padding-left: 2.2rem;
+}
+
+.btn-success{
+        background: #ff7f32;
+        border-color: #ff7f32;
+}
+
+.form-row label{
+    color: #000000;
+}
+section.images .circle { 
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    top: 20%;
+    left: 0;
+    background: linear-gradient( #dd9980, #ff7f32);
+    clip-path: circle(40% at right 80%);
+    z-index: -1;
+}
