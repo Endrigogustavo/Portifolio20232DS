@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_delete) {
 
-            echo "<script>alert('One Product Has been deleted')</script>";
+            echo "<script>alert('Um produto foi excluído')</script>";
 
             echo "<script>window.open('index.php?view_products','_self')</script>";
         }

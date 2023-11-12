@@ -4,7 +4,7 @@ session_start();
 
 
 //Variáveis de Link
-$index= "index.php";
+$index = "index.php";
 $register = "customer_register.php";
 $conta = "customer/my_account.php?my_orders";
 $cart = "cart.php";
@@ -13,7 +13,7 @@ $products = "#";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
-
+$sobrenos = "about.php";
 
 // Inclui arquivos necessários, como configurações de banco de dados, cabeçalho, funções e conteúdo principal.
 include("includes/db.php");
@@ -29,7 +29,7 @@ include("includes/main.php");
   <!-- HERO -->
   <div class="nero">
     <div class="nero__heading">
-      <span class="nero__bold">Pr©dutos |</span> ADAPLAY 
+      <span class="nero__bold">Pr©dutos </span>
     </div>
     <p class="nero__text">
     </p>
@@ -82,26 +82,26 @@ include("includes/footer.php");
 
 
 <script>
-  $(document).ready(function() {
+  $(document).ready(function () {
 
     /// Mostrar e Ocultar pesquisa ///
 
     // Quando um elemento com a classe '.nav-toggle' é clicado
-    $('.nav-toggle').click(function() {
+    $('.nav-toggle').click(function () {
 
       // Toggle (mostrar/ocultar) elementos com as classes '.panel-collapse' e '.collapse-data' com uma animação de 700ms
-      $(".panel-collapse,.collapse-data").slideToggle(700, function() {
+      $(".panel-collapse,.collapse-data").slideToggle(700, function () {
 
         // Após a animação, verifica se o elemento está oculto ou visível
         if ($(this).css('display') == 'none') {
 
           // Se estiver oculto, muda o texto do elemento com a classe '.hide-show' para 'Show'
-          $(".hide-show").html('Show');
+          $(".hide-show").html('<img src="images/aberto.png" class="icon-image">');
 
         } else {
 
           // Se estiver visível, muda o texto do elemento com a classe '.hide-show' para 'Hide'
-          $(".hide-show").html('Hide');
+          $(".hide-show").html('<img src="images/fechado.png" class="icon-image">');
 
         }
 
@@ -113,17 +113,17 @@ include("includes/footer.php");
 
     /// O código dos filtros de pesquisa começa ///
 
-    $(function() {
+    $(function () {
 
       // Extensão do jQuery para criar um filtro de tabela
       $.fn.extend({
 
-        filterTable: function() {
+        filterTable: function () {
 
-          return this.each(function() {
+          return this.each(function () {
 
             // Quando um elemento desse filtro é pressionado
-            $(this).on('keyup', function() {
+            $(this).on('keyup', function () {
 
               var $this = $(this),
 
@@ -143,7 +143,7 @@ include("includes/footer.php");
               } else {
 
                 // Caso contrário, percorra cada linha e oculte aquelas que não correspondem à pesquisa
-                rows.each(function() {
+                rows.each(function () {
 
                   var $this = $(this);
 
@@ -173,7 +173,7 @@ include("includes/footer.php");
 
 
 <script>
-  $(document).ready(function() {
+  $(document).ready(function () {
 
     // Início da função getProducts
     function getProducts() {
@@ -187,7 +187,7 @@ include("includes/footer.php");
       iKey = 0; // Inicializa um contador
 
       // Percorre todas as caixas de seleção de fabricantes
-      $.each(aInputs, function(key, oInput) {
+      $.each(aInputs, function (key, oInput) {
         if (oInput.checked) { // Verifica se a caixa de seleção está marcada
           aKeys[iKey] = oInput.value; // Armazena o valor marcado no array de chaves
         }
@@ -211,7 +211,7 @@ include("includes/footer.php");
       iKey = 0;
 
       // Percorre todas as caixas de seleção de categorias de produtos
-      $.each(aInputs, function(key, oInput) {
+      $.each(aInputs, function (key, oInput) {
         if (oInput.checked) {
           aKeys[iKey] = oInput.value;
         }
@@ -234,7 +234,7 @@ include("includes/footer.php");
       iKey = 0;
 
       // Percorre todas as caixas de seleção de categorias gerais
-      $.each(aInputs, function(key, oInput) {
+      $.each(aInputs, function (key, oInput) {
         if (oInput.checked) {
           aKeys[iKey] = oInput.value;
         }
@@ -259,7 +259,7 @@ include("includes/footer.php");
         url: "load.php", // URL para a qual a solicitação AJAX é enviada
         method: "POST", // Método HTTP usado na solicitação
         data: sPath + 'sAction=getProducts', // Dados enviados com a solicitação, incluindo 'sPath' e 'sAction'
-        success: function(data) { // Função a ser executada quando a solicitação AJAX for bem-sucedida
+        success: function (data) { // Função a ser executada quando a solicitação AJAX for bem-sucedida
           $('#Products').html(''); // Limpa o conteúdo do elemento com ID 'Products'
           $('#Products').html(data); // Define o conteúdo do elemento 'Products' com o resultado da solicitação AJAX
           $("#wait").empty(); // Remove o conteúdo do elemento com ID 'wait', que provavelmente era a imagem de carregamento
@@ -270,7 +270,7 @@ include("includes/footer.php");
         url: "load.php", // Outra solicitação AJAX para uma URL diferente
         method: "POST", // Método HTTP usado na solicitação
         data: sPath + 'sAction=getPaginator', // Dados enviados com a solicitação, incluindo 'sPath' e 'sAction'
-        success: function(data) { // Função a ser executada quando a solicitação AJAX for bem-sucedida
+        success: function (data) { // Função a ser executada quando a solicitação AJAX for bem-sucedida
           $('.pagination').html(''); // Limpa o conteúdo dos elementos com a classe 'pagination'
           $('.pagination').html(data); // Define o conteúdo dos elementos 'pagination' com o resultado da solicitação AJAX
         }
@@ -282,15 +282,15 @@ include("includes/footer.php");
     // Fim da Função getProducts
 
     // Associar a Função getProducts a Eventos de Clique nas Caixas de Seleção
-    $('.get_manufacturer').click(function() {
+    $('.get_manufacturer').click(function () {
       getProducts();
     });
 
-    $('.get_p_cat').click(function() {
+    $('.get_p_cat').click(function () {
       getProducts();
     });
 
-    $('.get_cat').click(function() {
+    $('.get_cat').click(function () {
       getProducts();
     });
 

@@ -12,433 +12,429 @@ if (!isset($_SESSION['admin_email'])) {
 
 ?>
 
-    <div class="row"><!-- 1 row Starts -->
+    <div class="row"><!-- 1 linha começa -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <!-- <h1 class="page-header">Dashboard</h1> -->
-
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
+        <!-- <h1 class="page-header">Painel</h1> -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard
+                    <i class="fa fa-dashboard"></i>Painel
 
                 </li>
 
-            </ol><!-- breadcrumb Ends -->
+            </ol><!-- breadcrumb Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 1 row Ends -->
+    </div><!-- Fim de 1 linha -->
 
 
-    <div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-primary"><!-- panel panel-primary Starts -->
+            <div class="panel panel-primary"><!-- panel panel-primary Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-tasks fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
-                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
+                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Inicia -->
 
                             <div class="huge"> <?php echo $count_products; ?> </div>
 
-                            <div>Products</div>
+                            <div>Produtos</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_products">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
 
-                        <span class="pull-left"> View Details </span>
+                        <span class="pull-left">Ver detalhes </span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-primary Ends -->
+            </div><!-- painel painel-primário Termina -->
 
-        </div><!-- col-lg-3 col-md-6 Ends -->
+        </div><!-- col-lg-3 col-md-6 Termina -->
 
 
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-green"><!-- panel panel-green Starts -->
+            <div class="panel panel-green"><!-- panel panel-green Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-comments fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
-                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
+                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Inicia -->
 
                             <div class="huge"> <?php echo $count_customers; ?> </div>
 
-                            <div>Customers</div>
+                            <div>Clientes</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_customers">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
 
-                        <span class="pull-left"> View Details </span>
+                        <span class="pull-left">Ver detalhes </span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-green Ends -->
+            </div><!-- painel painel-verde Termina -->
 
-        </div><!-- col-lg-3 col-md-6 Ends -->
+        </div><!-- col-lg-3 col-md-6 Termina -->
 
 
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-yellow"><!-- panel panel-yellow Starts -->
+            <div class="panel panel-yellow"><!-- painel painel-amarelo Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-shopping-cart fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
-                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
+                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Inicia -->
 
                             <div class="huge"> <?php echo $count_p_categories; ?> </div>
 
                             <div>Categoria de Produtos</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_p_cats">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
 
-                        <span class="pull-left"> View Details </span>
+                        <span class="pull-left"> Ver detalhes</span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-yellow Ends -->
+            </div><!-- painel painel-amarelo Termina -->
 
-        </div><!-- col-lg-3 col-md-6 Ends -->
+        </div><!-- col-lg-3 col-md-6 Termina -->
 
 
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-red"><!-- panel panel-red Starts -->
+            <div class="panel panel-red"><!-- panel panel-red Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-support fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
                         <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
 
                             <div class="huge"> <?php echo $count_total_orders; ?> </div>
 
-                            <div>Orders</div>
+                            <div>Pedidos</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_orders">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
-
-                        <span class="pull-left"> View Details </span>
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
+                        <span class="pull-left"> Ver detalhes</span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-red Ends -->
+            </div><!-- painel painel-vermelho Extremidades -->
 
-        </div><!-- col-lg-3 col-md-6 Ends -->
+        </div><!-- col-lg-3 col-md-6 Termina -->
 
 
-    </div><!-- 2 row Ends -->
-
+    </div><!-- Fim de 2 linhas -->
     <div class="row">
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-success"><!-- panel panel-red Starts -->
+            <div class="panel panel-success"><!-- panel panel-red Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-dollar fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
-                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
+                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Inicia -->
 
                             <div class="huge"> <?php echo $count_total_earnings ?> </div>
 
-                            <div>Earnings</div>
+                            <div>Ganhos</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_orders">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
 
-                        <span class="pull-left"> View Details </span>
+                        <span class="pull-left"> Ver detalhes </span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-red Ends -->
+            </div><!-- painel painel-vermelho Extremidades -->
 
-        </div><!-- col-lg-3 col-md-6 Ends -->
+        </div><!-- col-lg-3 col-md-6 Termina -->
 
 
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-warning"><!-- panel panel-red Starts -->
+            <div class="panel panel-warning"><!-- panel panel-red Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-spinner fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
-                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
+                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Inicia -->
 
                             <div class="huge"> <?php echo $count_pending_orders ?> </div>
 
-                            <div>Pending Orders</div>
+                            <div>Ordens pendentes</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_orders">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
 
-                        <span class="pull-left"> View Details </span>
+                        <span class="pull-left"> Visualizar detalhes </span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-red Ends -->
+            </div><!-- painel painel-vermelho Extremidades -->
 
-        </div><!-- col-lg-3 col-md-6 Ends -->
+        </div><!-- col-lg-3 col-md-6 Termina -->
 
 
 
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-info"><!-- panel panel-red Starts -->
+            <div class="panel panel-info"><!-- panel panel-red Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-check fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
-                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
+                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Inicia -->
 
                             <div class="huge"> <?php echo $count_completed_orders ?> </div>
 
-                            <div>Completed Orders</div>
+                            <div>Pedidos concluídos</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_orders">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
 
-                        <span class="pull-left"> View Details </span>
+                        <span class="pull-left"> Ver detalhes</span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-red Ends -->
+            </div><!-- painel painel-vermelho Extremidades -->
 
         </div><!-- col-lg-3 col-md-6 Ends -->
 
 
 
-        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Starts -->
+        <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 Inicia -->
 
-            <div class="panel panel-danger"><!-- panel panel-red Starts -->
+            <div class="panel panel-danger"><!-- col-lg-3 col-md-6 Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
+                    <div class="row"><!-- linha do cabeçalho do painel começa -->
 
-                    <div class="row"><!-- panel-heading row Starts -->
-
-                        <div class="col-xs-3"><!-- col-xs-3 Starts -->
+                        <div class="col-xs-3"><!-- col-xs-3 Inicia -->
 
                             <i class="fa fa-percent fa-5x"> </i>
 
-                        </div><!-- col-xs-3 Ends -->
+                        </div><!-- col-xs-3 Termina -->
 
-                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Starts -->
+                        <div class="col-xs-9 text-right"><!-- col-xs-9 text-right Inicia -->
 
                             <div class="huge"> <?php echo $count_coupons; ?> </div>
 
-                            <div>Total Coupons</div>
+                            <div>Total de cupons</div>
 
-                        </div><!-- col-xs-9 text-right Ends -->
+                        </div><!-- col-xs-9 text-right Termina -->
 
-                    </div><!-- panel-heading row Ends -->
+                    </div><!-- fim da linha do cabeçalho do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
                 <a href="index.php?view_orders">
 
-                    <div class="panel-footer"><!-- panel-footer Starts -->
+                    <div class="panel-footer"><!-- panel-footer Inicia -->
 
-                        <span class="pull-left"> View Details </span>
+                        <span class="pull-left">Ver detalhes </span>
 
                         <span class="pull-right"> <i class="fa fa-arrow-circle-right"></i> </span>
 
                         <div class="clearfix"></div>
 
-                    </div><!-- panel-footer Ends -->
+                    </div><!-- panel-footer Termina -->
 
                 </a>
 
-            </div><!-- panel panel-red Ends -->
+            </div><!-- painel painel-vermelho Extremidades -->
 
-        </div><!-- col-lg-3 col-md-6 Ends -->
+        </div><!-- col-lg-3 col-md-6 Termina -->
     </div>
 
-    <div class="row"><!-- 3 row Starts -->
+    <div class="row"><!-- Início de 3 linhas -->
 
-        <div class="col-lg-12"><!-- col-lg-8 Starts -->
+        <div class="col-lg-12"><!-- col-lg-8 Inicia -->
 
-            <div class="panel panel-primary"><!-- panel panel-primary Starts -->
+            <div class="panel panel-primary"><!-- panel panel-primary Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <h3 class="panel-title"><!-- panel-title Starts -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
 
-                        <i class="fa fa-money fa-fw"></i> New Orders
+                        <i class="fa fa-money fa-fw"></i> Novos Pedidos
 
-                    </h3><!-- panel-title Ends -->
+                    </h3><!-- panel-title Termina -->
 
                 </div><!-- panel-heading Ends -->
 
                 <div class="panel-body"><!-- panel-body Starts -->
 
-                    <div class="table-responsive"><!-- table-responsive Starts -->
+                    <div class="table-responsive"><!-- Início responsivo à tabela -->
 
-                        <table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
+                        <table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Inicia -->
 
-                            <thead><!-- thead Starts -->
+                            <thead><!-- thead Inicia -->
 
                                 <tr>
-                                    <th>Order #</th>
-                                    <th>Customer</th>
-                                    <th>Invoice No</th>
-                                    <th>Product ID</th>
-                                    <th>Qty</th>
-                                    <th>Size</th>
+                                    <th>Pedido nº</th>
+                                    <th>Cliente</th>
+                                    <th>Número da fatura</th>
+                                    <th>ID do produto</th>
+                                    <th>Quantidade</th>
+                                    <th>Tamanho</th>
                                     <th>Status</th>
 
 
                                 </tr>
 
-                            </thead><!-- thead Ends -->
+                            </thead><!-- thead Termina -->
 
-                            <tbody><!-- tbody Starts -->
+                            <tbody><!-- tbody Inicia -->
 
                                 <?php
 
@@ -505,39 +501,39 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <?php } ?>
 
-                            </tbody><!-- tbody Ends -->
+                            </tbody><!-- tbody Termina -->
+
 
 
                         </table><!-- table table-bordered table-hover table-striped Ends -->
 
-                    </div><!-- table-responsive Ends -->
+                    </div><!-- extremidades responsivas à tabela -->
 
-                    <div class="text-right"><!-- text-right Starts -->
+                    <div class="text-right"><!-- text-right Inicia -->
 
                         <a href="index.php?view_orders">
 
-                            View All Orders <i class="fa fa-arrow-circle-right"></i>
+                          Ver todos os pedidos <i class="fa fa-arrow-circle-right"></i>
 
                         </a>
 
-                    </div><!-- text-right Ends -->
+                    </div><!-- text-right Termina -->
 
 
-                </div><!-- panel-body Ends -->
+                </div><!-- panel-body Termina -->
+            </div><!-- painel painel-primário Termina -->
 
-            </div><!-- panel panel-primary Ends -->
+        </div><!-- col-lg-8 Termina -->
 
-        </div><!-- col-lg-8 Ends -->
+        <div class="col-md-4"><!-- col-md-4 Inicia -->
 
-        <div class="col-md-4"><!-- col-md-4 Starts -->
-
-            <div class="panel"><!-- panel Starts -->
-
+            <div class="panel"><!-- painel Inicia -->
 
 
-            </div><!-- panel Ends -->
 
-        </div><!-- col-md-4 Ends -->
+            </div><!-- painel Termina -->
+
+        </div><!-- col-md-4 Termina -->
 
     </div><!-- 3 row Ends -->
 

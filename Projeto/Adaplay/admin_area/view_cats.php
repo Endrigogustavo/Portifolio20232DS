@@ -8,64 +8,62 @@ if (!isset($_SESSION['admin_email'])) {
 } else {
 
 ?>
+    <div class="row"><!-- 1 linha começa -->
 
-    <div class="row"><!-- 1 row Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
-
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / View Categories
+                    <i class="fa fa-dashboard"></i> Dashboard / Ver Categorias
 
                 </li>
 
-            </ol><!-- breadcrumb Ends -->
+            </ol><!-- breadcrumb Termina -->
 
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 1 row Ends -->
+    </div><!-- Fim de 1 linha -->
 
-    <div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
                     <h3 class="panel-title">
 
-                        <i class="fa fa-money fa-fw"></i> View Categories
+                        <i class="fa fa-money fa-fw"></i> Ver Categorias
 
                     </h3>
+                </div><!-- cabeçalho do painel Termina -->
 
-                </div><!-- panel-heading Ends -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-                <div class="panel-body"><!-- panel-body Starts -->
+                    <div class="table-responsive"><!-- table-responsive Inicia -->
 
-                    <div class="table-responsive"><!-- table-responsive Starts -->
+                        <table class="table table-bordered table-hover table-striped"><!-- table-bordered table-hover table-striped Inicia -->
 
-                        <table class="table table-bordered table-hover table-striped"><!-- table-bordered table-hover table-striped Starts -->
-
-                            <thead><!-- thead Starts -->
+                            <thead><!-- thead Inicia -->
 
                                 <tr>
 
                                     <th>#</th>
-                                    <th>Category Name</th>
-                                    <th>Delete</th>
-                                    <th>Edit</th>
+                                    <th>Nome da Categoria</th>
+                                    <th>Deletar</th>
+                                    <th>Editar</th>
 
 
 
                                 </tr>
 
-                            </thead><!-- thead Ends -->
+                            </thead><!-- thead Termina -->
 
-                            <tbody><!-- tbody Starts -->
+                            <tbody><!-- tbody Inicia -->
 
                                 <?php
 
@@ -99,7 +97,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                             <a href="index.php?delete_cat=<?php echo $cat_id; ?>">
 
-                                                <i class="fa fa-trash-o"></i> Delete
+                                                <i class="fa fa-trash-o"></i> Deletar
 
                                             </a>
 
@@ -109,7 +107,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                             <a href="index.php?edit_cat=<?php echo $cat_id; ?>">
 
-                                                <i class="fa fa-pencil"></i> Edit
+                                                <i class="fa fa-pencil"></i> Editar
 
                                             </a>
 
@@ -120,20 +118,19 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <?php } ?>
 
-                            </tbody><!-- tbody Ends -->
+                            </tbody><!-- tbody Termina -->
 
                         </table><!-- table-bordered table-hover table-striped Ends -->
 
 
-                    </div><!-- table-responsive Ends -->
+                    </div><!-- Fim responsivo à tabela -->
 
-                </div><!-- panel-body Ends -->
+                </div><!-- painel-body Termina -->
 
-            </div><!-- panel panel-default Ends -->
+            </div><!-- painel panel-default Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 2 row Ends -->
-
+    </div><!-- Fim de 2 linhas -->
 
 <?php } ?>

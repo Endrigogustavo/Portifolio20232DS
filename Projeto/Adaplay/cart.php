@@ -3,7 +3,7 @@
 session_start();
 
 //Variáveis de Link
-$index= "index.php";
+$index = "index.php";
 $register = "customer_register.php";
 $conta = "customer/my_account.php?my_orders";
 $cart = "#";
@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
+$sobrenos = "about.php";
 
 
 // Inclui o arquivo de conexão com o banco de dados
@@ -39,6 +40,13 @@ include("includes/main.php");
   </div>
 </main>
 
+<div id="carrinhoVazio">
+  <p>Seu carrinho de compras está vazio.</p>
+  <a href="index.php" id="continuarComprandoBtn">
+    <i class="bx bx-shopping-bag"></i> Continuar Comprando
+  </a>
+</div>
+
 <div id="content"><!-- conteúdo Começa -->
   <div class="container"><!-- container Começa -->
     <div class="col-md-9" id="cart"><!-- col-md-9 Começa -->
@@ -56,7 +64,9 @@ include("includes/main.php");
           $count = mysqli_num_rows($runCarrinho);
           ?>
 
-          <p class="text-muted"> Você tem atualmente <?php echo $count; ?> item(s) no seu carrinho. </p>
+          <p class="text-muted"> Você tem atualmente
+            <?php echo $count; ?> item(s) no seu carrinho.
+          </p>
 
           <div class="table-responsive"><!-- tabela-responsiva Começa -->
             <table class="table"><!-- tabela Começa -->
@@ -104,24 +114,28 @@ include("includes/main.php");
                         <img src="admin_area/product_images/<?php echo $produtoImagem1; ?>">
                       </td>
                       <td>
-                        <a href="#"> <?php echo $tituloProduto; ?> </a>
+                        <a href="#">
+                          <?php echo $tituloProduto; ?>
+                        </a>
                       </td>
                       <td>
                         <!-- Campo de entrada para a quantidade do produto -->
                         <input type="text" name="quantity" value="<?php echo $_SESSION['quantidadeProduto']; ?>" data-product_id="<?php echo $idProduto; ?>" class="quantity form-control">
                       </td>
                       <td>
-                        R$<?php echo $precoUnico; ?>,00
+                        R$
+                        <?php echo $precoUnico; ?>,00
                       </td>
                       <td>
                         <?php echo $proSize; ?>
                       </td>
                       <td>
                         <!-- Caixa de seleção para remover o produto -->
-                        <input type="checkbox" name="remove[]" value="<?php echo $idProduto; ?>">
+                        <button name="remove" value="<?php echo $idProduto; ?>" id="deletebutton" autocomplete="off"><i class='bx bx-trash'></i></button>
                       </td>
                       <td>
-                        R$<?php echo $subtotal; ?>,00
+                        R$
+                        <?php echo $subtotal; ?>,00
                       </td>
                     </tr><!-- tr Termina -->
                 <?php
@@ -133,7 +147,9 @@ include("includes/main.php");
               <tfoot><!-- rodapé Começa -->
                 <tr>
                   <th colspan="5"> Total </th>
-                  <th colspan="2"> R$<?php echo $total; ?>,00 </th>
+                  <th colspan="2"> R$
+                    <?php echo $total; ?>,00
+                  </th>
                 </tr>
               </tfoot><!-- rodapé Termina -->
             </table><!-- tabela Termina -->
@@ -175,18 +191,24 @@ include("includes/main.php");
                 }
               }
 
-              // Se nenhum produto tiver quantidade igual a zero, exibe o botão de checkout.
-              if (!$quantidadeZero) {
-                echo '<a href="checkout.php" class="btn btn-success">
-                Efetuar Check-Out <i class="fa fa-chevron-right"></i>
-              </a>';
-              } else {
-                // Se houver algum produto com quantidade igual a zero, desabilite o botão de checkout e exiba a mensagem de erro.
+              // Verifica se o carrinho está vazio (count igual a zero) ou se algum produto tem quantidade igual a zero.
+              if ($count == 0 || $quantidadeZero) {
+                // Se o carrinho estiver vazio ou algum produto tiver quantidade igual a zero, desabilite o botão de checkout e exiba a mensagem de erro.
                 echo '<button class="btn btn-success" disabled>
-                Efetuar Check-Out <i class="fa fa-chevron-right"></i>
-              </button>
-              <script>alert("Selecione uma quantidade válida para todos os produtos antes de prosseguir com o Checkout.")</script>';
+      Efetuar Check-Out <i class="fa fa-chevron-right"></i>
+  </button>';
+                if ($count == 0) {
+                  // echo '<script>alert("Seu carrinho está vazio!")</script>';
+                } else {
+                  // echo '<script>alert("Selecione uma quantidade válida para todos os produtos antes de prosseguir com o Checkout.")</script>';
+                }
+              } else {
+                // Caso contrário, exibe o botão de checkout normalmente.
+                echo '<a href="select_payment.php" class="btn btn-success">
+      Efetuar Check-Out <i class="fa fa-chevron-right"></i>
+  </a>';
               }
+
               ?>
             </div><!-- pull-right Termina -->
           </div><!-- rodapé da caixa Termina -->
@@ -249,14 +271,15 @@ include("includes/main.php");
       function updateCart()
       {
         global $con;
-        if (isset($_POST['update'])) {
-          foreach ($_POST['remove'] as $removeId) {
-            // Remove o produto do carrinho
-            $deleteProduct = "delete from cart where p_id='$removeId'";
-            $runDelete = mysqli_query($con, $deleteProduct);
-            if ($runDelete) {
-              echo "<script>window.open('cart.php','_self')</script>";
-            }
+
+        if (isset($_POST['remove'])) { //Verifica se o Botão foi apertado
+          $removeId = $_POST['remove']; //Puxa o Valor do Botão
+
+          //Comando SQL 
+          $deleteProduct = "delete from cart where p_id='$removeId'";
+          $runDelete = mysqli_query($con, $deleteProduct);
+          if ($runDelete) {
+            echo "<script>window.open('cart.php','_self')</script>";
           }
         }
       }
@@ -351,11 +374,11 @@ $productLabel
           <table class="table"><!-- tabela Começa -->
             <tbody><!-- corpo Começa -->
               <tr>
-                <td> Subtotal do Pedido </td>
-                <th> R$<?php echo $total; ?>,00 </th>
+                <td>Subtotal do Pedido</td>
+                <th>R$<?php echo $total; ?>,00</th>
               </tr>
               <tr>
-                <td> Envio e manipulação </td>
+                <td>Envio e manipulação</td>
                 <th>R$0,00</th>
               </tr>
               <tr>
@@ -377,6 +400,7 @@ $productLabel
 <!-- Scripts JavaScript -->
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"></script>
+
 <script>
   $(document).ready(function(data) {
     $(document).on('keyup', '.quantity', function() {
@@ -398,6 +422,20 @@ $productLabel
     });
   });
 </script>
+
+<script>
+  // JavaScript para exibir ou ocultar o carrinho com base no conteúdo
+  $(document).ready(function() {
+    var count = <?php echo $count; ?>;
+
+    // Se o carrinho estiver vazio, oculta o carrinho e exibe a mensagem
+    if (count == 0) {
+      document.getElementById("content").style.display = "none";
+      document.getElementById("carrinhoVazio").style.display = "block";
+    }
+  });
+</script>
+
 </body>
 
 </html>

@@ -8,49 +8,47 @@ if (!isset($_SESSION['admin_email'])) {
 
 
 ?>
+    <div class="row"><!-- Início da 1ª linha -->
 
+        <div class="col-lg-12"><!-- Início da coluna-lg-12 -->
 
-    <div class="row"><!-- 1 row Starts -->
-
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
-
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
+            <ol class="breadcrumb"><!-- Início da trilha -->
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"> </i> Dashboard / Insert Coupon
+                    <i class="fa fa-dashboard"> </i> Painel / Inserir Cupons
 
                 </li>
 
-            </ol><!-- breadcrumb Ends -->
+            </ol><!-- Fim da trilha -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- Fim da coluna-lg-12 -->
 
-    </div><!-- 1 row Ends -->
+    </div><!-- Fim da 1ª linha -->
 
-    <div class="row"><!-- 2 row Starts --->
+    <div class="row"><!-- Início da 2ª linha -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- Início da coluna-lg-12 -->
 
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- Início do painel padrão -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- Início do cabeçalho do painel -->
 
-                    <h3 class="panel-title"><!-- panel-title Starts -->
+                    <h3 class="panel-title"><!-- Início do título do painel -->
 
-                        <i class="fa fa-money fa-fw"> </i> Insert Coupon
+                        <i class="fa fa-money fa-fw"> </i> Inserir Cupons
 
-                    </h3><!-- panel-title Ends -->
+                    </h3><!-- Fim do título do painel -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- Fim do cabeçalho do painel -->
 
-                <div class="panel-body"><!--panel-body Starts -->
+                <div class="panel-body"><!-- Início do corpo do painel -->
 
-                    <form class="form-horizontal" method="post" action=""><!-- form-horizontal Starts -->
+                    <form class="form-horizontal" method="post" action=""><!-- Início do formulário horizontal -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                            <label class="col-md-3 control-label"> Coupon Title </label>
+                            <label class="col-md-3 control-label"> Título do Cupom </label>
 
                             <div class="col-md-6">
 
@@ -58,11 +56,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                            <label class="col-md-3 control-label"> Coupon Price </label>
+                            <label class="col-md-3 control-label"> Preço do Cupom </label>
 
                             <div class="col-md-6">
 
@@ -70,11 +68,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                            <label class="col-md-3 control-label"> Coupon Code </label>
+                            <label class="col-md-3 control-label"> Código do Cupom </label>
 
                             <div class="col-md-6">
 
@@ -82,11 +80,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                            <label class="col-md-3 control-label"> Coupon Limit </label>
+                            <label class="col-md-3 control-label"> Limite do Cupom </label>
 
                             <div class="col-md-6">
 
@@ -94,17 +92,17 @@ if (!isset($_SESSION['admin_email'])) {
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
-                            <label class="col-md-3 control-label">Select coupon for Product Or bundle</label>
+                            <label class="col-md-3 control-label"> Qual Produto Receberá o Cupom? </label>
 
                             <div class="col-md-6">
 
                                 <select name="product_id" class="form-control">
 
-                                    <option> Select Coupon Product </option>
+                                    <option> Selecione o Produto </option>
 
                                     <?php
 
@@ -123,56 +121,33 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     ?>
 
-                                    <option></option>
-
-                                    <option>Select Coupon For Bundle</option>
-
-                                    <option></option>
-
-                                    <?php
-
-                                    $get_p = "select * from products where status='bundle'";
-
-                                    $run_p = mysqli_query($con, $get_p);
-
-                                    while ($row_p = mysqli_fetch_array($run_p)) {
-
-                                        $p_id = $row_p['product_id'];
-
-                                        $p_title = $row_p['product_title'];
-
-                                        echo "<option value='$p_id'> $p_title </option>";
-                                    }
-
-                                    ?>
-
                                 </select>
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- Início do grupo de formulário -->
 
                             <label class="col-md-3 control-label"> </label>
 
                             <div class="col-md-6">
 
-                                <input type="submit" name="submit" class=" btn btn-primary form-control" value=" Insert Coupon ">
+                                <input type="submit" name="submit" class="btn btn-primary form-control" value=" Inserir Cupom ">
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- Fim do grupo de formulário -->
 
-                    </form><!-- form-horizontal Ends -->
+                    </form><!-- Fim do formulário horizontal -->
 
-                </div><!--panel-body Ends -->
+                </div><!-- Fim do corpo do painel -->
 
-            </div><!-- panel panel-default Ends -->
+            </div><!-- Fim do painel padrão -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- Fim da coluna-lg-12 -->
 
-    </div><!-- 2 row Ends --->
+    </div><!-- Fim da 2ª linha -->
 
     <?php
 
@@ -198,7 +173,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($check_coupons == 1) {
 
-            echo "<script>alert('Coupon Code or Product Already Added Choose another Coupon code or Product')</script>";
+            echo "<script>alert('Código de cupom ou produto já adicionado Escolha outro código de cupom ou produto.')</script>";
         } else {
 
             $insert_coupon = "insert into coupons (product_id,coupon_title,coupon_price,coupon_code,coupon_limit,coupon_used) values ('$product_id','$coupon_title','$coupon_price','$coupon_code','$coupon_limit','$coupon_used')";
@@ -207,7 +182,7 @@ if (!isset($_SESSION['admin_email'])) {
 
             if ($run_coupon) {
 
-                echo "<script>alert('New Coupon Has Been Inserted')</script>";
+                echo "<script>alert('Novo cupom foi inserido')</script>";
 
                 echo "<script>window.open('index.php?view_coupons','_self')</script>";
             }

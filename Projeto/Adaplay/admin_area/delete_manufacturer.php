@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_manufacturer) {
 
-            echo "<script>alert('One Manufacturer Has Been Deleted')</script>";
+            echo "<script>alert('Um fabricante foi excluído')</script>";
             echo "<script>window.open('index.php?view_manufacturers','_self')</script>";
         }
     }

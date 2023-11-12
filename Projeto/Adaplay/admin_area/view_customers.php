@@ -8,67 +8,69 @@ if (!isset($_SESSION['admin_email'])) {
 
 ?>
 
-    <div class="row"><!-- 1 row Starts -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+    <div class="row"><!-- 1 linha começa -->
 
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
+
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / View Customers
+                    <i class="fa fa-dashboard"></i> Dashboard / Ver Clientes
 
                 </li>
+            </ol><!-- breadcrumb Termina -->
 
-            </ol><!-- breadcrumb Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+    </div><!-- Fim de 1 linha -->
 
-    </div><!-- 1 row Ends -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-    <div class="row"><!-- 2 row Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                    <h3 class="panel-title">
+                        <!-- panel-title Inicia -->
 
-                    <h3 class="panel-title"><!-- panel-title Starts -->
+                        <i class="fa fa-money fa-fw"></i> Ver Clientes
 
-                        <i class="fa fa-money fa-fw"></i> View Customers
+                    </h3><!-- panel-title Termina -->
 
-                    </h3><!-- panel-title Ends -->
-
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
 
-                <div class="panel-body"><!-- panel-body Starts -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-                    <div class="table-responsive"><!-- table-responsive Starts -->
+                    <div class="table-responsive"><!-- table-responsive Inicia -->
 
-                        <table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
+                        <table class="table table-bordered table-hover table-striped">
+                            <!-- table table-bordered table-hover table-striped Inicia -->
 
-                            <thead><!-- thead Starts -->
+                            <thead><!-- thead Inicia -->
 
                                 <tr>
 
                                     <th>#</th>
-                                    <th>Name</th>
+                                    <th>Nome</th>
                                     <th>Email</th>
-                                    <th>Image</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                    <th>Phone Number</th>
-                                    <th>Delete</th>
+                                    <th>Imagem</th>
+                                    <th>País</th>
+                                    <th>Cidade</th>
+                                    <th>Número de Telefone</th>
+                                    <th>Deletar</th>
 
 
                                 </tr>
 
-                            </thead><!-- thead Ends -->
+                            </thead><!-- thead Termina -->
 
 
-                            <tbody><!-- tbody Starts -->
+                            <tbody><!-- tbody Inicia -->
 
                                 <?php
 
@@ -121,7 +123,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                             <a href="index.php?customer_delete=<?php echo $c_id; ?>">
 
-                                                <i class="fa fa-trash-o"></i> Delete
+                                                <i class="fa fa-trash-o"></i> Deletar
 
                                             </a>
 
@@ -134,21 +136,21 @@ if (!isset($_SESSION['admin_email'])) {
                                 <?php } ?>
 
 
-                            </tbody><!-- tbody Ends -->
+                            </tbody><!-- tbody Termina -->
 
 
 
                         </table><!-- table table-bordered table-hover table-striped Ends -->
 
-                    </div><!-- table-responsive Ends -->
+                    </div><!-- Fim responsivo à tabela -->
 
-                </div><!-- panel-body Ends -->
+                </div><!-- painel-body Termina -->
 
 
-            </div><!-- panel panel-default Ends -->
+            </div><!-- painel panel-default Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 2 row Ends -->
+    </div><!-- Fim de 2 linhas -->
 
 <?php } ?>

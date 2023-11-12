@@ -7,23 +7,7 @@
 	<div class="footer-nav">
 		<div class="container clearfix">
 
-			<div class="footer-nav__col footer-nav__col--info">
-				<div class="footer-nav__heading">Informação</div>
-				<ul class="footer-nav__list">
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Marca</a>
-					</li>
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Serviço Customizado</a>
-					</li>
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Privacy &amp; Cookies</a>
-					</li>
-					<li class="footer-nav__item">
-						<a href="#" class="footer-nav__link">Posição Geográfica</a>
-					</li>
-				</ul>
-			</div>
+
 
 			<div class="footer-nav__col footer-nav__col--whybuy">
 				<div class="footer-nav__heading">Por que Comprar Conosco?</div>
@@ -72,11 +56,11 @@
 			<div class="footer-nav__col footer-nav__col--contacts">
 				<div class="footer-nav__heading">Detalhes de Contato</div>
 				<address class="address">
-					Head Office: Avenida ADAPLAY.<br>
+					Escritório: Avenida ADAPLAY.<br>
 					180-182 Rua Teste, São Paulo.
 				</address>
 				<div class="phone">
-					Telephone:
+					Telefone:
 					<a class="phone__number" href="tel:0123456789">0123-456-789</a>
 				</div>
 				<div class="email">
@@ -84,6 +68,8 @@
 					<a href="mailto:support@yourwebsite.com" class="email__addr">support@yourwebsite.com</a>
 				</div>
 			</div>
+
+			
 
 		</div>
 	</div>
@@ -99,13 +85,6 @@
 				&copy; <?php echo date("Y"); ?> ADAPLAY&trade;
 			</div>
 
-			<div class="developer">
-				All Rights Reserved
-			</div>
-
-			<div class="designby">
-				ADAPLAY
-			</div>
 
 		</div>
 	</div>

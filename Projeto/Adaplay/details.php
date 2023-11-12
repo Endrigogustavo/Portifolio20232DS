@@ -2,8 +2,8 @@
 
 session_start();
 
-  //Variáveis de Link
-$index= "index.php";
+//Variáveis de Link
+$index = "index.php";
 $register = "customer_register.php";
 $conta = "customer/my_account.php?my_orders";
 $cart = "cart.php";
@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
+$sobrenos = "about.php";
 
 include("includes/db.php");
 include("includes/header.php");
@@ -97,7 +98,7 @@ if ($check_product == 0) {
 
 
 
-?>
+  ?>
 
   <main>
     <!-- HERO -->
@@ -110,32 +111,33 @@ if ($check_product == 0) {
     </div>
   </main>
 
-  <div id="content"><!-- content Starts -->
-    <div class="container"><!-- container Starts -->
+  <div id="content"><!-- conteúdo Inicia -->
+    <div class="container"><!-- contêiner inicia -->
 
 
 
 
 
-      <div class="col-md-12"><!-- col-md-12 Starts -->
+      <div class="col-md-12"><!-- col-md-12 Inicia -->
 
         <div class="row" id="productMain"><!-- row Starts -->
 
-          <div class="col-sm-6"><!-- col-sm-6 Starts -->
+          <div class="col-sm-6"><!-- col-sm-6 Inicia -->
 
-            <div id="mainImage"><!-- mainImage Starts -->
+            <div id="mainImage"><!-- mainImage inicia -->
 
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-                <ol class="carousel-indicators"><!-- carousel-indicators Starts -->
+                <ol class="carousel-indicators"><!-- indicadores de carrossel Inicia -->
 
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                   <li data-target="#myCarousel" data-slide-to="1"></li>
                   <li data-target="#myCarousel" data-slide-to="2"></li>
 
-                </ol><!-- carousel-indicators Ends -->
 
-                <div class="carousel-inner"><!-- carousel-inner Starts -->
+                </ol><!-- indicadores de carrossel Terminam -->
+
+                <div class="carousel-inner"><!-- carousel-inner Inicia -->
 
                   <div class="item active">
 
@@ -155,38 +157,42 @@ if ($check_product == 0) {
 
                   </div>
 
-                </div><!-- carousel-inner Ends -->
+                </div><!-- carousel-inner Termina -->
 
-                <a href="#myCarousel" class="left carousel-control" data-slide="prev"><!-- left carousel-control Starts -->
+                <a href="#myCarousel" class="left carousel-control"
+                  data-slide="prev"><!-- left carousel-control Inicia -->
 
                   <span class="glyphicon glyphicon-chevron-left"> </span>
 
                   <span class="sr-only"> Anterior </span>
 
-                </a><!-- left carousel-control Ends -->
+                </a><!-- controle esquerdo do carrossel Termina -->
 
-                <a class="right carousel-control" href="#myCarousel" data-slide="next"><!-- right carousel-control Starts -->
+                <a class="right carousel-control" href="#myCarousel"
+                  data-slide="next"><!-- right carousel-control Inicia -->
 
                   <span class="glyphicon glyphicon-chevron-right"> </span>
 
                   <span class="sr-only"> Próximo </span>
 
-                </a><!-- right carousel-control Ends -->
+                </a><!-- controle do carrossel à direita Termina -->
 
               </div>
 
-            </div><!-- mainImage Ends -->
+            </div><!-- mainImage Termina -->
 
             <?php echo $product_label; ?>
 
-          </div><!-- col-sm-6 Ends -->
+          </div><!-- col-sm-6 Termina -->
 
 
-          <div class="col-sm-6"><!-- col-sm-6 Starts -->
+          <div class="col-sm-6"><!-- col-sm-6 Inicia -->
 
-            <div class="box"><!-- box Starts -->
+            <div class="box"><!-- box Inicia -->
 
-              <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
+              <h1 class="text-center">
+                <?php echo $pro_title; ?>
+              </h1>
 
               <?php
 
@@ -244,19 +250,19 @@ if ($check_product == 0) {
 
               ?>
 
-              <form action="" method="post" class="form-horizontal"><!-- form-horizontal Starts -->
+              <form action="" method="post" class="form-horizontal"><!-- form-horizontal Inicia -->
 
                 <?php
 
                 if ($status == "product") {
 
-                ?>
+                  ?>
 
-                  <div class="form-group"><!-- form-group Starts -->
+                  <div class="form-group"><!-- form-group Inicia -->
 
                     <label class="col-md-5 control-label">Quantidade do Produto </label>
 
-                    <div class="col-md-7"><!-- col-md-7 Starts -->
+                    <div class="col-md-7"><!-- col-md-7 Inicia -->
 
                       <select name="product_qty" class="form-control">
 
@@ -265,7 +271,9 @@ if ($check_product == 0) {
                         $String_Texto = "Definir Quantidade";
                         ?>
 
-                        <option value="<?php echo $Valor_Quantidade; ?>"><?php echo $String_Texto; ?></option>
+                        <option value="<?php echo $Valor_Quantidade; ?>">
+                          <?php echo $String_Texto; ?>
+                        </option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -275,15 +283,16 @@ if ($check_product == 0) {
 
                       </select>
 
-                    </div><!-- col-md-7 Ends -->
 
-                  </div><!-- form-group Ends -->
+                    </div><!-- col-md-7 Termina -->
 
-                  <div class="form-group"><!-- form-group Starts -->
+                  </div><!-- form-group Termina -->
+
+                  <div class="form-group"><!-- form-group Inicia -->
 
                     <label class="col-md-5 control-label">Tamanho do Produto</label>
 
-                    <div class="col-md-7"><!-- col-md-7 Starts -->
+                    <div class="col-md-7"><!-- col-md-7 Inicia -->
 
                       <select name="product_size" class="form-control">
 
@@ -294,7 +303,9 @@ if ($check_product == 0) {
 
                         ?>
 
-                        <option value="<?php echo $Valor_Tamanho; ?>"><?php echo $String_Texto_Tamanho ?> </option>
+                        <option value="<?php echo $Valor_Tamanho; ?>">
+                          <?php echo $String_Texto_Tamanho ?>
+                        </option>
                         <option>Pequeno</option>
                         <option>Médio</option>
                         <option>Grande</option>
@@ -302,19 +313,18 @@ if ($check_product == 0) {
 
                       </select>
 
-                    </div><!-- col-md-7 Ends -->
+                    </div><!-- col-md-7 Termina -->
 
 
-                  </div><!-- form-group Ends -->
-
+                  </div><!-- form-group Termina -->
                 <?php } else { ?>
 
 
-                  <div class="form-group"><!-- form-group Starts -->
+                 <!--  <div class="form-group">
 
                     <label class="col-md-5 control-label">Bundle Quantity </label>
 
-                    <div class="col-md-7"><!-- col-md-7 Starts -->
+                    <div class="col-md-7"> 
 
                       <select name="product_qty" class="form-control">
 
@@ -328,30 +338,31 @@ if ($check_product == 0) {
 
                       </select>
 
-                    </div><!-- col-md-7 Ends -->
+                    </div> col-md-7 Termina 
 
-                  </div><!-- form-group Ends -->
+                  </div> form-group Termina
 
-                  <div class="form-group"><!-- form-group Starts -->
+                  <div class="form-group"> form-group Inicia
 
-                    <label class="col-md-5 control-label">Bundle Size</label>
+                    <label class="col-md-5 control-label">Tamanho do pacote</label>
 
-                    <div class="col-md-7"><!-- col-md-7 Starts -->
+                    <div class="col-md-7"> col-md-7 Inicia 
 
                       <select name="product_size" class="form-control">
 
-                        <option>Select a Size</option>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
+                        <option>Selecione um tamanho</option>
+                        <option>Pequeno</option>
+                        <option>Médio</option>
+                        <opção>Grande</opção>
 
 
                       </select>
 
-                    </div><!-- col-md-7 Ends -->
+
+                    </div>col-md-7 Termina -->
 
 
-                  </div><!-- form-group Ends -->
+                 <!-- </div>form-group Termina -->
 
 
                 <?php } ?>
@@ -420,8 +431,7 @@ Preço do Pacote: $$pro_price
 
                 ?>
 
-                <p class="text-center buttons"><!-- text-center buttons Starts -->
-
+                <p class="text-center buttons"><!-- botões centrais de texto Inicia -->
                   <button class="btn btn-danger" type="submit" name="add_cart">
 
                     <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
@@ -485,16 +495,16 @@ Preço do Pacote: $$pro_price
 
                   ?>
 
-                </p><!-- text-center buttons Ends -->
+                </p><!-- botões text-center Terminais -->
 
-              </form><!-- form-horizontal Ends -->
+              </form><!-- form-horizontal Termina -->
 
-            </div><!-- box Ends -->
+            </div><!-- fim da caixa -->
 
 
-            <div class="row" id="thumbs"><!-- row Starts -->
+            <div class="row" id="thumbs"><!-- row Inicia -->
 
-              <div class="col-xs-4"><!-- col-xs-4 Starts -->
+              <div class="col-xs-4"><!-- col-xs-4 Inicia -->
 
                 <a href="#" class="thumb">
 
@@ -502,9 +512,10 @@ Preço do Pacote: $$pro_price
 
                 </a>
 
-              </div><!-- col-xs-4 Ends -->
 
-              <div class="col-xs-4"><!-- col-xs-4 Starts -->
+              </div><!-- col-xs-4 Termina -->
+
+              <div class="col-xs-4"><!-- col-xs-4 Inicia -->
 
                 <a href="#" class="thumb">
 
@@ -512,9 +523,9 @@ Preço do Pacote: $$pro_price
 
                 </a>
 
-              </div><!-- col-xs-4 Ends -->
+              </div><!-- col-xs-4 Termina -->
 
-              <div class="col-xs-4"><!-- col-xs-4 Starts -->
+              <div class="col-xs-4"><!-- col-xs-4 Inicia -->
 
                 <a href="#" class="thumb">
 
@@ -522,20 +533,21 @@ Preço do Pacote: $$pro_price
 
                 </a>
 
-              </div><!-- col-xs-4 Ends -->
+              </div><!-- col-xs-4 Termina -->
 
 
-            </div><!-- row Ends -->
+            </div><!-- Fim da linha -->
 
 
-          </div><!-- col-sm-6 Ends -->
+          </div><!-- col-sm-6 Termina -->
 
 
-        </div><!-- row Ends -->
+        </div><!-- Fim da linha -->
 
-        <div class="box" id="details"><!-- box Starts -->
+        <div class="box" id="details"><!-- box Inicia -->
 
-          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#description" data-toggle="tab"><!-- btn btn-primary tab Starts -->
+          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#description"
+            data-toggle="tab"><!-- btn btn-primary tab Inicia -->
 
             <?php
 
@@ -549,48 +561,49 @@ Preço do Pacote: $$pro_price
 
             ?>
 
-          </a><!-- btn btn-primary tab Ends -->
+          </a><!-- btn btn-primary tab Termina -->
 
-          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#features" data-toggle="tab"><!-- btn btn-primary tab Starts -->
+          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#features"
+            data-toggle="tab"><!-- btn btn-primary tab Inicia -->
 
             Características
 
-          </a><!-- btn btn-primary tab Ends -->
+          </a><!-- btn btn-primary tab Termina -->
 
-          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#video" data-toggle="tab"><!-- btn btn-primary tab Starts -->
+          <a class="btn btn-info tab" style="margin-bottom:10px;" href="#video"
+            data-toggle="tab"><!-- btn btn-primary tab Starts -->
 
             Sons e Vídeos
 
-          </a><!-- btn btn-primary tab Ends -->
+          </a><!-- btn btn-primary tab Termina -->
 
           <hr style="margin-top:0px;">
 
-          <div class="tab-content"><!-- tab-content Starts -->
+          <div class="tab-content"><!-- tab-content Inicia -->
 
-            <div id="description" class="tab-pane fade in active" style="margin-top:7px;"><!-- description tab-pane fade in active Starts -->
+            <div id="description" class="tab-pane fade in active" style="margin-top:7px;">
+              <!-- descrição do painel da guia desaparece nas partidas ativas -->
 
               <?php echo $pro_desc; ?>
 
-            </div><!-- description tab-pane fade in active Ends -->
-
+            </div><!-- painel da guia de descrição desaparece nas extremidades ativas -->
             <div id="features" class="tab-pane fade in" style="margin-top:7px;"><!-- features tab-pane fade in  Starts -->
 
               <?php echo $pro_features; ?>
 
-            </div><!-- features tab-pane fade in  Ends -->
-
+            </div><!-- apresenta o fade do painel de guias nas extremidades -->
             <div id="video" class="tab-pane fade in" style="margin-top:7px;"><!-- video tab-pane fade in Starts -->
 
               <?php echo $pro_video; ?>
 
-            </div><!-- video tab-pane fade in  Ends -->
+
+            </div><!-- painel da guia de vídeo desaparece nas extremidades -->
 
 
-          </div><!-- tab-content Ends -->
+          </div><!-- tab-content Termina -->
 
-        </div><!-- box Ends -->
-
-        <div id="row same-height-row"><!-- row same-height-row Starts -->
+        </div><!-- fim da caixa -->
+        <div id="row same-height-row"><!-- row same-height-row Inicia -->
 
           <?php
 
@@ -598,17 +611,19 @@ Preço do Pacote: $$pro_price
 
 
 
-          ?>
+            ?>
 
-            <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Starts -->
 
-              <div class="box same-height headline"><!-- box same-height headline Starts -->
+            <div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Inicia -->
 
-                <h3 class="text-center"> Você também pode gostar destes produtos: Nós fornecemos os 3 principais itens de produtos. </h3>
+              <div class="box Same-Height Headline"><!-- Box Same-Height Headlines Começa -->
 
-              </div><!-- box same-height headline Ends -->
+                <h3 class="text-center"> Você também pode gostar destes produtos: Nós fornecemos os 3 principais itens de
+                  produtos. </h3>
 
-            </div><!-- col-md-3 col-sm-6 Ends -->
+              </div><!-- título da mesma altura da caixa Termina -->
+
+            </div><!-- col-md-3 col-sm-6 Termina -->
 
             <?php
 
@@ -722,11 +737,12 @@ $product_label
 
           <?php } else { ?>
 
-            <div class="box same-height"><!-- box same-height Starts -->
 
-              <h3 class="text-center"> Bundle Products </h3>
+            <div class="box same-height"><!-- box same-height Inicia -->
 
-            </div><!-- box same-height Ends -->
+              <h3 class="text-center"> Pacote de produtos </h3>
+
+            </div><!-- box de mesma altura Termina -->
 
             <?php
 
@@ -858,13 +874,13 @@ $product_label
 
           <?php } ?>
 
-        </div><!-- row same-height-row Ends -->
+        </div><!-- linha com a mesma altura da linha Termina -->
 
-      </div><!-- col-md-12 Ends -->
+      </div><!-- col-md-12 Termina -->
 
 
-    </div><!-- container Ends -->
-  </div><!-- content Ends -->
+    </div><!-- container Termina -->
+  </div><!-- conteúdo termina -->
 
 
 

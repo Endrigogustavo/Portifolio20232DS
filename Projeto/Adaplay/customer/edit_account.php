@@ -89,9 +89,10 @@ $customer_image = $row_customer['customer_image'];
 
         <label> Foto do Cliente: </label>
 
-        <input type="file" name="c_image" class="form-control" required><br>
+        <input type="file" name="c_image" class="form-control" required id="imgfile"><br>
 
-        <img src="customer_images/<?php echo $customer_image; ?>" width="100" height="100" class="img-responsive">
+        <img src="customer_images/<?php echo $customer_image; ?>" width="100" height="100" class="img-responsive"
+            id="imgpreview">
 
 
     </div>
@@ -131,13 +132,13 @@ if (isset($_POST['update'])) {
     $c_image = $_FILES['c_image']['name'];
 
     $c_image_tmp = $_FILES['c_image']['tmp_name'];
-  // Move a imagem carregada para a pasta de imagens do cliente
+    // Move a imagem carregada para a pasta de imagens do cliente
     move_uploaded_file($c_image_tmp, "customer_images/$c_image");
-// Cria uma consulta SQL para atualizar as informações do cliente no banco de dados
+    // Cria uma consulta SQL para atualizar as informações do cliente no banco de dados
     $update_customer = "update customers set customer_name='$c_name',customer_email='$c_email',customer_country='$c_country',customer_city='$c_city',customer_contact='$c_contact',customer_address='$c_address',customer_image='$c_image' where customer_id='$update_id'";
- // Executa a consulta SQL de atualização
+    // Executa a consulta SQL de atualização
     $run_customer = mysqli_query($con, $update_customer);
-// Se a atualização for bem-sucedida, exibe uma mensagem de alerta e redireciona para a página de logout
+    // Se a atualização for bem-sucedida, exibe uma mensagem de alerta e redireciona para a página de logout
     if ($run_customer) {
 
         echo "<script>alert('Your account has been updated please login again')</script>";

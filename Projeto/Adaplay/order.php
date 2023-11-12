@@ -16,7 +16,7 @@ if (isset($_GET['c_id'])) {
 
 $ip_add = getRealUserIp(); // Obtém o endereço IP do usuário.
 
-$status = "pending"; // Define o status do pedido como "pendente".
+$status = "Pago"; // Define o status do pedido como "pago".
 
 $invoice_no = mt_rand(); // Gera um número de fatura aleatório.
 
@@ -44,9 +44,6 @@ while ($row_cart = mysqli_fetch_array($run_cart)) {
     // Remove o item do carrinho após processamento do pedido.
     $delete_cart = "delete from cart where ip_add='$ip_add'";
     $run_delete = mysqli_query($con, $delete_cart);
-
-    // Exibe uma mensagem de alerta para o usuário informando que o pedido foi submetido.
-    echo "<script>alert('Your order has been submitted, Thanks')</script>";
 
     // Redireciona o usuário para sua conta após a conclusão do pedido.
     echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";

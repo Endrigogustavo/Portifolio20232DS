@@ -42,7 +42,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         <li class="active">
 
-          <i class="fa fa-dashboard"></i> Dashboard / Edit About Us Page
+          <i class="fa fa-dashboard"></i> Dashboard / Editar Página Sobre Nós
 
         </li>
 
@@ -62,7 +62,7 @@ if (!isset($_SESSION['admin_email'])) {
 
           <h3 class="panel-title">
 
-            <i class="fa fa-money fa-fw"></i> Edit About Us Page
+            <i class="fa fa-money fa-fw"></i> Editar Página Sobre Nós
 
           </h3>
 
@@ -74,7 +74,7 @@ if (!isset($_SESSION['admin_email'])) {
 
             <div class="form-group"><!-- form-group Starts -->
 
-              <label class="col-md-3 control-label"> About Us Heading : </label>
+              <label class="col-md-3 control-label"> Títuto Sobre Nós : </label>
 
               <div class="col-md-8">
 
@@ -87,7 +87,7 @@ if (!isset($_SESSION['admin_email'])) {
 
             <div class="form-group"><!-- form-group Starts -->
 
-              <label class="col-md-3 control-label"> About Us Short Description : </label>
+              <label class="col-md-3 control-label"> Breve descrição do Sobre Nós : </label>
 
               <div class="col-md-8">
 
@@ -103,7 +103,7 @@ if (!isset($_SESSION['admin_email'])) {
 
             <div class="form-group"><!-- form-group Starts -->
 
-              <label class="col-md-3 control-label"> About Us Description : </label>
+              <label class="col-md-3 control-label"> Descrição do Sobre Nós : </label>
 
               <div class="col-md-8">
 
@@ -123,7 +123,7 @@ if (!isset($_SESSION['admin_email'])) {
 
               <div class="col-md-8">
 
-                <input type="submit" name="submit" value="Update About Us Page" class="btn btn-primary form-control">
+                <input type="submit" name="submit" value="Editar Sobre Nós" class="btn btn-primary form-control">
 
               </div>
 
@@ -156,7 +156,7 @@ if (!isset($_SESSION['admin_email'])) {
 
     if ($run_about_us) {
 
-      echo "<script>alert('About Us Page Has Been Updated')</script>";
+      echo "<script>alert('A página Sobre nós foi atualizada')</script>";
 
       echo "<script>window.open('index.php?dashboard','_self')</script>";
     }

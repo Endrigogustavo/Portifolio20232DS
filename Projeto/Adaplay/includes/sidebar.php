@@ -1,106 +1,108 @@
 <?php
-$aMan  = array();
+$aMan = array();
 
 $aPCat = array();
 
-$aCat  = array();
+$aCat = array();
 
-/// Manufacturers Code Starts ///
+/// Início do código do fabricante ///
 
 if (isset($_REQUEST['man']) && is_array($_REQUEST['man'])) {
 
     foreach ($_REQUEST['man'] as $sKey => $sVal) {
 
-        if ((int)$sVal != 0) {
+        if ((int) $sVal != 0) {
 
-            $aMan[(int)$sVal] = (int)$sVal;
+            $aMan[(int) $sVal] = (int) $sVal;
         }
     }
 }
 
-/// Manufacturers Code Ends ///
+/// Fim do código do fabricante ///
 
-/// Products Categories Code Starts ///
+/// Código de categorias de produtos começa ///
 
 if (isset($_REQUEST['p_cat']) && is_array($_REQUEST['p_cat'])) {
 
     foreach ($_REQUEST['p_cat'] as $sKey => $sVal) {
 
-        if ((int)$sVal != 0) {
+        if ((int) $sVal != 0) {
 
-            $aPCat[(int)$sVal] = (int)$sVal;
+            $aPCat[(int) $sVal] = (int) $sVal;
         }
     }
 }
 
-/// Products Categories Code Ends ///
+/// Código de categorias de produtos termina ///
 
-/// Categories Code Starts ///
+/// O código das categorias começa ///
 
 if (isset($_REQUEST['cat']) && is_array($_REQUEST['cat'])) {
 
     foreach ($_REQUEST['cat'] as $sKey => $sVal) {
 
-        if ((int)$sVal != 0) {
+        if ((int) $sVal != 0) {
 
-            $aCat[(int)$sVal] = (int)$sVal;
+            $aCat[(int) $sVal] = (int) $sVal;
         }
     }
 }
 
-/// Categories Code Ends ///
+/// Código das categorias termina ///
 
 
 ?>
 
-<div class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Starts -->
+<div class="panel panel-default sidebar-menu"><!-- painel painel-default sidebar-menu Inicia -->
 
-    <div class="panel-heading"><!-- panel-heading Starts -->
+    <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-        <h3 class="panel-title"><!-- panel-title Starts -->
+        <h3 class="panel-title"><!-- panel-title Inicia -->
 
             Fabricantes
 
-            <div class="pull-right"><!-- pull-right Starts -->
+            <div class="pull-right"><!-- puxar para a direita Inicia -->
 
                 <a href="#" style="color:black;">
 
                     <span class="nav-toggle hide-show">
 
-                        Hide
+                        <img src="images/fechado.png" class="icon-image">
 
                     </span>
 
                 </a>
 
-            </div><!-- pull-right Ends -->
+            </div><!-- extremidades puxadas para a direita -->
 
-        </h3><!-- panel-title Ends -->
+        </h3><!-- panel-title Termina -->
 
-    </div><!-- panel-heading Ends -->
+    </div><!-- cabeçalho do painel Termina -->
 
-    <div class="panel-collapse collapse-data"><!-- panel-collapse collapse-data starts -->
+    <div class="panel-collapse collapse-data"><!-- painel-collapse colapso-dados inicia -->
 
-        <div class="panel-body"><!-- panel-body Starts -->
+        <div class="panel-body"><!-- panel-body Inicia -->
 
-            <div class="input-group"><!-- input-group Starts -->
+            <div class="input-group"><!-- input-group Inicia -->
 
-                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-manufacturer" placeholder="Filtrar Fabricantes">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                    data-filters="#dev-manufacturer" placeholder="Filtrar Fabricantes">
 
 
                 <a class="input-group-addon"> <i class="fa fa-search"></i> </a>
 
-            </div><!-- input-group Ends -->
 
-        </div><!-- panel-body Ends -->
+            </div><!-- grupo de entrada termina -->
 
-        <div class="panel-body scroll-menu"><!-- panel-body scroll-menu Starts -->
+        </div><!-- painel-body Termina -->
+        <div class="panel-body scroll-menu"><!-- menu de rolagem do corpo do painel Inicia -->
 
-            <ul class="nav nav-pills nav-stacked category-menu" id="dev-manufacturer"><!-- nav nav-pills nav-stacked category-menu Starts -->
+            <ul class="nav nav-pills nav-stacked category-menu" id="dev-manufacturer">
+                <!-- nav nav-pills nav-stacked categoria-menu Inicia -->
 
                 <?php
 
-                $get_manfacturer = "select * from manufacturers where manufacturer_top='yes'";
+                $get_manfacturer = "select * from manufacturers where manufacturer_top='sim'";
 
                 $run_manfacturer = mysqli_query($con, $get_manfacturer);
 
@@ -124,7 +126,7 @@ if (isset($_REQUEST['cat']) && is_array($_REQUEST['cat'])) {
 
                     echo "
 
-<li style='background:#dddddd;' class='checkbox checkbox-primary'>
+<li class='checkbox checkbox-primary'>
 
 <a>
 
@@ -153,7 +155,7 @@ $manufacturer_title
                 }
 
 
-                $get_manfacturer = "select * from manufacturers where manufacturer_top='no'";
+                $get_manfacturer = "select * from manufacturers where manufacturer_top='não'";
 
                 $run_manfacturer = mysqli_query($con, $get_manfacturer);
 
@@ -207,63 +209,66 @@ $manufacturer_title
 
                 ?>
 
-            </ul><!-- nav nav-pills nav-stacked category-menu Ends -->
+            </ul><!-- nav nav-pills nav-stacked categoria-menu Termina -->
 
-        </div><!-- panel-body scroll-menu Ends -->
+        </div><!-- panel-body scroll-menu Termina -->
 
-    </div><!-- panel-collapse collapse-data Ends -->
-
-
-</div><!-- panel panel-default sidebar-menu Ends -->
+    </div><!-- panel-collapselapse-data Termina -->
 
 
-<div class="panel panel-default sidebar-menu"><!--- panel panel-default sidebar-menu Starts -->
+</div><!-- painel painel-default sidebar-menu Termina -->
 
-    <div class="panel-heading"><!-- panel-heading Starts -->
 
-        <h3 class="panel-title"><!-- panel-title Starts -->
+<div class="panel panel-default sidebar-menu"><!--- painel painel-default sidebar-menu Inicia -->
+
+    <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
+
+        <h3 class="panel-title"><!-- panel-title Inicia -->
 
             Categoria de Produtos
 
-            <div class="pull-right"><!-- pull-right Starts -->
+            <div class="pull-right"><!-- puxar para a direita Inicia -->
 
                 <a href="#" style="color:black;">
 
                     <span class="nav-toggle hide-show">
 
-                        Hide
+                        <img src="images/fechado.png" class="icon-image">
 
                     </span>
 
                 </a>
 
-            </div><!-- pull-right Ends -->
+            </div><!-- extremidades puxadas para a direita -->
 
-        </h3><!-- panel-title Ends -->
+        </h3><!-- panel-title Termina -->
 
-    </div><!-- panel-heading Ends -->
+    </div><!-- cabeçalho do painel Termina -->
 
-    <div class="panel-collapse collapse-data"><!-- panel-collapse collapse-data Starts -->
+    <div class="panel-collapse collapse-data"><!-- panel-collapselapse-data Inicia -->
 
-        <div class="panel-body"><!-- panel-body Starts -->
+        <div class="panel-body"><!-- panel-body Inicia -->
 
-            <div class="input-group"><!-- input-group Starts -->
+            <div class="input-group"><!-- input-group Inicia -->
 
-                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-p-cats" placeholder="Filtrar Categoria de Produto">
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                    data-filters="#dev-p-cats" placeholder="Filtrar Categoria de Produto">
 
                 <a class="input-group-addon"> <i class="fa fa-search"></i> </a>
 
-            </div><!-- input-group Ends -->
 
-        </div><!-- panel-body Ends -->
+            </div><!-- grupo de entrada termina -->
 
-        <div class="panel-body scroll-menu"><!-- panel-body scroll-menu Starts -->
+        </div><!-- painel-body Termina -->
 
-            <ul class="nav nav-pills nav-stacked category-menu" id="dev-p-cats"><!-- nav nav-pills nav-stacked category-menu Starts -->
+        <div class="panel-body scroll-menu"><!-- menu de rolagem do corpo do painel Inicia -->
+
+            <ul class="nav nav-pills nav-stacked category-menu" id="dev-p-cats">
+                <!-- nav nav-pills nav-stacked categoria-menu Inicia -->
 
                 <?php
 
-                $get_p_cats = "select * from product_categories where p_cat_top='yes'";
+                $get_p_cats = "select * from product_categories where p_cat_top='sim'";
 
                 $run_p_cats = mysqli_query($con, $get_p_cats);
 
@@ -283,7 +288,7 @@ $manufacturer_title
 
                     echo "
 
-<li class='checkbox checkbox-primary' style='background:#dddddd;' >
+<li class='checkbox checkbox-primary'>
 
 <a>
 
@@ -313,7 +318,7 @@ $p_cat_title
 ";
                 }
 
-                $get_p_cats = "select * from product_categories where p_cat_top='no'";
+                $get_p_cats = "select * from product_categories where p_cat_top='não'";
 
                 $run_p_cats = mysqli_query($con, $get_p_cats);
 
@@ -375,54 +380,58 @@ $p_cat_title
 
 
 
-<div class="panel panel-default sidebar-menu"><!--- panel panel-default sidebar-menu Starts -->
+<div class="panel panel-default sidebar-menu"><!--- painel painel-default sidebar-menu Inicia -->
 
-    <div class="panel-heading"><!-- panel-heading Starts -->
+    <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-        <h3 class="panel-title"><!-- panel-title Starts -->
+        <h3 class="panel-title"><!-- panel-title Inicia -->
 
             Categorias
 
-            <div class="pull-right"><!-- pull-right Starts -->
+            <div class="pull-right"><!-- puxar para a direita Inicia -->
 
                 <a href="#" style="color:black;">
 
                     <span class="nav-toggle hide-show">
 
-                        Hide
+                        <img src="images/fechado.png" class="icon-image">
 
                     </span>
 
                 </a>
 
-            </div><!-- pull-right Ends -->
+            </div><!-- extremidades puxadas para a direita -->
 
 
-        </h3><!-- panel-title Ends -->
+        </h3><!-- panel-title Termina -->
 
-    </div><!-- panel-heading Ends -->
+    </div><!-- cabeçalho do painel Termina -->
 
-    <div class="panel-collapse collapse-data"><!-- panel-collapse collapse-data Starts -->
+    <div class="panel-collapse collapse-data"><!-- panel-collapselapse-data Inicia -->
 
-        <div class="panel-body"><!-- panel-body Starts -->
 
-            <div class="input-group"><!-- input-group Starts -->
+        <div class="panel-body"><!-- panel-body Inicia -->
 
-                <input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-cats" placeholder="Filtrar Categorias">
+            <div class="input-group"><!-- input-group Inicia -->
+
+                <input type="text" class="form-control" id="dev-table-filter" data-action="filter"
+                    data-filters="#dev-cats" placeholder="Filtrar Categorias">
 
                 <a class="input-group-addon"> <i class="fa fa-search"> </i> </a>
 
-            </div><!-- input-group Ends -->
+            </div><!-- grupo de entrada termina -->
 
-        </div><!-- panel-body Ends -->
+        </div><!-- painel-body Termina -->
 
-        <div class="panel-body scroll-menu"><!-- panel-body scroll-menu Starts -->
+        <div class="panel-body scroll-menu"><!-- menu de rolagem do corpo do painel Inicia -->
 
-            <ul class="nav nav-pills nav-stacked category-menu" id="dev-cats"><!-- nav nav-pills nav-stacked category-menu Starts -->
+            <ul class="nav nav-pills nav-stacked category-menu" id="dev-cats">
+
+                <!-- nav nav-pills nav-stacked categoria-menu Inicia -->
 
                 <?php
 
-                $get_cat = "select * from categories where cat_top='yes'";
+                $get_cat = "select * from categories where cat_top='sim'";
 
                 $run_cat = mysqli_query($con, $get_cat);
 
@@ -442,7 +451,7 @@ $p_cat_title
 
                     echo "
 
-<li class='checkbox checkbox-primary' style='background:#dddddd;'>
+<li class='checkbox checkbox-primary'>
 
 <a>
 
@@ -471,7 +480,7 @@ $cat_title
                 }
 
 
-                $get_cat = "select * from categories where cat_top='no'";
+                $get_cat = "select * from categories where cat_top='não'";
 
                 $run_cat = mysqli_query($con, $get_cat);
 
@@ -522,10 +531,10 @@ $cat_title
 
                 ?>
 
-            </ul><!-- nav nav-pills nav-stacked category-menu Ends -->
+            </ul><!-- nav nav-pills nav-stacked categoria-menu Termina -->
 
-        </div><!-- panel-body scroll-menu Ends -->
+        </div><!-- panel-body scroll-menu Termina -->
 
-    </div><!-- panel-collapse collapse-data Ends -->
+    </div><!-- panel-collapselapse-data Termina -->
 
-</div><!--- panel panel-default sidebar-menu Ends -->
+</div><!--- painel painel-default sidebar-menu Termina -->

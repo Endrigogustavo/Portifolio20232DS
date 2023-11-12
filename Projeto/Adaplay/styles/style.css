@@ -56,15 +56,15 @@ body {
   }
 }
 
-#top ul.menu > li {
+#top ul.menu>li {
   display: inline-block;
 }
 
-#top ul.menu > li a {
+#top ul.menu>li a {
   color: #eeeeee;
 }
 
-#top ul.menu > li + li:before {
+#top ul.menu>li+li:before {
   content: "|\00a0";
   padding: 0 5px;
   color: #f7f7f7;
@@ -93,7 +93,7 @@ body {
   text-decoration: none;
 }
 
-.navbar ul.nav > li > a {
+.navbar ul.nav>li>a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
@@ -103,7 +103,7 @@ body {
   padding-top: 10px;
 }
 
-.navbar ul.nav > li > a:hover {
+.navbar ul.nav>li>a:hover {
   background: #e7e7e7;
 }
 
@@ -255,7 +255,7 @@ body {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.breadcrumb > li + li:before {
+.breadcrumb>li+li:before {
   content: ">\00a0";
   color: #cccccc;
 }
@@ -319,19 +319,19 @@ body {
 
 @media (max-width: 1000px) {
   #content #productMain .price {
-   font-size: 26px;
+    font-size: 26px;
   }
 }
 
 @media (max-width: 698px) {
   #content #productMain .price {
-   font-size: 22px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 576px) {
   #content #productMain .price {
-   font-size: 30px;
+    font-size: 30px;
   }
 }
 
@@ -356,13 +356,16 @@ body {
 }
 
 #content #cart .table tbody tr td input {
-  width: 41px;
+  width: 55px;
   text-align: center;
+  margin: 0 auto;
 }
 
 #content #cart .table tbody tr td {
   vertical-align: middle;
+  text-align: center;
 }
+
 #content #cart .table tfoot {
   font-size: 18px;
 }
@@ -394,6 +397,7 @@ body {
 #content #order-summary table {
   margin-top: 20px;
 }
+
 #content #order-summary table td {
   color: #999999;
 }
@@ -504,25 +508,25 @@ body {
   cursor: pointer;
 }
 
-.checkbox input[type="checkbox"]:focus + span::before {
+.checkbox input[type="checkbox"]:focus+span::before {
   outline: thin dotted;
   outline: 5px auto;
   outline-offset: -2px;
 }
 
-.checkbox input[type="checkbox"]:checked + span::after {
+.checkbox input[type="checkbox"]:checked+span::after {
   font-family: "FontAwesome";
 
   content: "\f00c";
 }
 
-.checkbox-primary input[type="checkbox"]:checked + span::before {
+.checkbox-primary input[type="checkbox"]:checked+span::before {
   background-color: #337ab7;
 
   border-color: #337ab7;
 }
 
-.checkbox-primary input[type="checkbox"]:checked + span::after {
+.checkbox-primary input[type="checkbox"]:checked+span::after {
   color: #fff;
 }
 

@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_delete) {
 
-            echo "<script>alert('Order Has Been Deleted')</script>";
+            echo "<script>alert('O pedido foi excluído')</script>";
 
             echo "<script>window.open('index.php?view_orders','_self')</script>";
         }

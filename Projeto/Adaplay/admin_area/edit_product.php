@@ -94,7 +94,7 @@ if (!isset($_SESSION['admin_email'])) {
 
   <head>
 
-    <title> Edit Products </title>
+    <title> Editar Produtos </title>
 
 
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
@@ -108,48 +108,48 @@ if (!isset($_SESSION['admin_email'])) {
 
   <body>
 
-    <div class="row"><!-- row Starts -->
+    <div class="row"><!-- linha começa -->
 
-      <div class="col-lg-12"><!-- col-lg-12 Starts -->
+      <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-        <ol class="breadcrumb"><!-- breadcrumb Starts -->
+        <ol class="breadcrumb"><!-- col-lg-12 Inicia -->
 
           <li class="active">
 
-            <i class="fa fa-dashboard"> </i> Dashboard / Edit Products
+            <i class="fa fa-dashboard"> </i> Dashboard / Editar Produtos
 
           </li>
 
-        </ol><!-- breadcrumb Ends -->
+        </ol><!-- breadcrumb Termina -->
 
-      </div><!-- col-lg-12 Ends -->
+      </div><!-- col-lg-12 Termina -->
 
-    </div><!-- row Ends -->
+    </div> <!-- Fim da linha -->
 
 
-    <div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- Início da 2ª linha -->
 
-      <div class="col-lg-12"><!-- col-lg-12 Starts -->
+      <div class="col-lg-12"><!-- Início da coluna-lg-12 -->
 
-        <div class="panel panel-default"><!-- panel panel-default Starts -->
+        <div class="panel panel-default"><!-- Início do painel padrão -->
 
-          <div class="panel-heading"><!-- panel-heading Starts -->
+          <div class="panel-heading"><!-- Início do cabeçalho do painel -->
 
             <h3 class="panel-title">
 
-              <i class="fa fa-money fa-fw"></i> Edit Products
+              <i class="fa fa-money fa-fw"></i> Editar Produtos
 
             </h3>
 
-          </div><!-- panel-heading Ends -->
+          </div><!-- Fim do cabeçalho do painel -->
 
-          <div class="panel-body"><!-- panel-body Starts -->
+          <div class="panel-body"><!-- Início do corpo do painel -->
 
-            <form class="form-horizontal" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
+            <form class="form-horizontal" method="post" enctype="multipart/form-data"><!-- Início do formulário horizontal -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Title </label>
+                <label class="col-md-3 control-label"> Título do Produto </label>
 
                 <div class="col-md-6">
 
@@ -157,12 +157,12 @@ if (!isset($_SESSION['admin_email'])) {
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Url </label>
+                <label class="col-md-3 control-label"> URL do Produto </label>
 
                 <div class="col-md-6">
 
@@ -172,17 +172,17 @@ if (!isset($_SESSION['admin_email'])) {
 
                   <p style="font-size:15px; font-weight:bold;">
 
-                    Product Url Example : navy-blue-t-shirt
+                    Exemplo de "URL" : carrinho-adapatado-azul
 
                   </p>
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Select A Manufacturer </label>
+                <label class="col-md-3 control-label"> Selecione um Fabricante </label>
 
                 <div class="col-md-6">
 
@@ -217,11 +217,11 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Category </label>
+                <label class="col-md-3 control-label"> Categoria de Produto </label>
 
                 <div class="col-md-6">
 
@@ -253,14 +253,13 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Category </label>
+                <label class="col-md-3 control-label"> Categoria </label>
 
                 <div class="col-md-6">
-
 
                   <select name="cat" class="form-control">
 
@@ -288,11 +287,11 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Image 1 </label>
+                <label class="col-md-3 control-label"> Primeira Imagem do Produto </label>
 
                 <div class="col-md-6">
 
@@ -301,11 +300,11 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Image 2 </label>
+                <label class="col-md-3 control-label"> Segunda Imagem do Produto </label>
 
                 <div class="col-md-6">
 
@@ -314,11 +313,11 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Image 3 </label>
+                <label class="col-md-3 control-label"> 3ª Imagem do Produto </label>
 
                 <div class="col-md-6">
 
@@ -327,11 +326,11 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Price </label>
+                <label class="col-md-3 control-label"> Preço do Produto </label>
 
                 <div class="col-md-6">
 
@@ -339,11 +338,11 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Sale Price </label>
+                <label class="col-md-3 control-label"> Preço Promocional do Produto </label>
 
                 <div class="col-md-6">
 
@@ -351,11 +350,11 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Keywords </label>
+                <label class="col-md-3 control-label"> Palavras-Chave do Produto </label>
 
                 <div class="col-md-6">
 
@@ -363,39 +362,39 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Tabs </label>
+                <label class="col-md-3 control-label"> Guias de produtos </label>
 
                 <div class="col-md-6">
 
-                  <ul class="nav nav-tabs"><!-- nav nav-tabs Starts -->
+                  <ul class="nav nav-tabs"><!-- Início das guias de navegação -->
 
                     <li class="active">
 
-                      <a data-toggle="tab" href="#description"> Product Description </a>
+                      <a data-toggle="tab" href="#description"> Descrição do Produto </a>
 
                     </li>
 
                     <li>
 
-                      <a data-toggle="tab" href="#features"> Product Features </a>
+                      <a data-toggle="tab" href="#features"> Especificações do Produto </a>
 
                     </li>
 
                     <li>
 
-                      <a data-toggle="tab" href="#video"> Sounds And Videos </a>
+                      <a data-toggle="tab" href="#video"> Sons e Vídeos </a>
 
                     </li>
 
-                  </ul><!-- nav nav-tabs Ends -->
+                  </ul><!-- Fim das guias de navegação -->
 
-                  <div class="tab-content"><!-- tab-content Starts -->
+                  <div class="tab-content"><!-- Início do conteúdo da guia -->
 
-                    <div id="description" class="tab-pane fade in active"><!-- description tab-pane fade in active Starts -->
+                    <div id="description" class="tab-pane fade in active"><!-- Início da guia de descrição -->
 
                       <br>
 
@@ -405,10 +404,10 @@ $manufacturer_title
 
 </textarea>
 
-                    </div><!-- description tab-pane fade in active Ends -->
+                    </div><!-- Fim da guia de descrição -->
 
 
-                    <div id="features" class="tab-pane fade in"><!-- features tab-pane fade in Starts -->
+                    <div id="features" class="tab-pane fade in"><!-- Início da guia de características -->
 
                       <br>
 
@@ -418,10 +417,10 @@ $manufacturer_title
 
 </textarea>
 
-                    </div><!-- features tab-pane fade in Ends -->
+                    </div><!-- Fim da guia de características -->
 
 
-                    <div id="video" class="tab-pane fade in"><!-- video tab-pane fade in Starts -->
+                    <div id="video" class="tab-pane fade in"><!-- Início da guia de vídeo -->
 
                       <br>
 
@@ -431,18 +430,18 @@ $manufacturer_title
 
 </textarea>
 
-                    </div><!-- video tab-pane fade in Ends -->
+                    </div><!-- Fim da guia de vídeo -->
 
 
-                  </div><!-- tab-content Ends -->
+                  </div><!-- Fim do conteúdo da guia -->
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
-                <label class="col-md-3 control-label"> Product Label </label>
+                <label class="col-md-3 control-label"> Rótulo do Produto </label>
 
                 <div class="col-md-6">
 
@@ -450,32 +449,29 @@ $manufacturer_title
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-              <div class="form-group"><!-- form-group Starts -->
+              <div class="form-group"><!-- Início do grupo de formulário -->
 
                 <label class="col-md-3 control-label"></label>
 
                 <div class="col-md-6">
 
-                  <input type="submit" name="update" value="Update Product" class="btn btn-primary form-control">
+                  <input type="submit" name="update" value="Atualizar Produto" class="btn btn-primary form-control">
 
                 </div>
 
-              </div><!-- form-group Ends -->
+              </div><!-- Fim do grupo de formulário -->
 
-            </form><!-- form-horizontal Ends -->
+            </form><!-- Fim do formulário horizontal -->
 
-          </div><!-- panel-body Ends -->
+          </div><!-- Fim do corpo do painel -->
 
-        </div><!-- panel panel-default Ends -->
+        </div><!-- Fim do painel padrão -->
 
-      </div><!-- col-lg-12 Ends -->
+      </div><!-- Fim da coluna-lg-12 -->
 
-    </div><!-- 2 row Ends -->
-
-
-
+    </div><!-- Fim da 2ª linha -->
 
   </body>
 
@@ -540,7 +536,7 @@ $manufacturer_title
 
     if ($run_product) {
 
-      echo "<script> alert('Product has been updated successfully') </script>";
+      echo "<script> alert('O produto foi atualizado com sucesso') </script>";
 
       echo "<script>window.open('index.php?view_products','_self')</script>";
     }

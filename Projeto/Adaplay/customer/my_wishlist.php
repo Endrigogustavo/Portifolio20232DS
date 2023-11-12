@@ -30,7 +30,7 @@
 
             <?php
 
-// Obtém informações do cliente com base no endereço de email da sessão.
+            // Obtém informações do cliente com base no endereço de email da sessão.
             $customer_session = $_SESSION['customer_email'];
 
             $get_customer = "select * from customers where customer_email='$customer_session'";
@@ -48,7 +48,7 @@
 
             $run_wishlist = mysqli_query($con, $get_wishlist);
 
-             // Loop para exibir os itens da lista de desejos.
+            // Loop para exibir os itens da lista de desejos.
             while ($row_wishlist = mysqli_fetch_array($run_wishlist)) {
 
                 $wishlist_id = $row_wishlist['wishlist_id'];
@@ -88,7 +88,7 @@
                         </a>
 
                     </td>
- <!-- Coluna com a imagem e o título do produto da lista de desejos. -->
+                    <!-- Coluna com a imagem e o título do produto da lista de desejos. -->
                     <td>
 
                         <a href="my_account.php?delete_wishlist=<?php echo $wishlist_id; ?>" class="btn btn-primary">
@@ -98,7 +98,7 @@
                         </a>
 
                     </td>
-  <!-- Coluna com um botão para excluir o item da lista de desejos. -->
+                    <!-- Coluna com um botão para excluir o item da lista de desejos. -->
                 </tr>
 
             <?php } ?>

@@ -10,7 +10,7 @@ include("includes/db.php");
 
 <head>
 
-    <title>Admin Login</title>
+    <title>Login do Administrador</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -20,26 +20,26 @@ include("includes/db.php");
 
 <body>
 
-    <div class="container"><!-- container Starts -->
+<div class="container"><!-- container inicia -->
 
-        <form class="form-login" action="" method="post"><!-- form-login Starts -->
+<form class="form-login" action="" method="post"><!-- form-login Inicia -->
 
-            <h2 class="form-login-heading">Admin Login</h2>
+            <h2 class="form-login-heading">Login do Administrador</h2>
 
-            <input type="text" class="form-control" name="admin_email" placeholder="Email Address" required>
+            <input type="text" class="form-control" name="admin_email" placeholder="Email" required>
 
-            <input type="password" class="form-control" name="admin_pass" placeholder="Password" required>
+            <input type="password" class="form-control" name="admin_pass" placeholder="Senha" required>
 
             <button class="btn btn-lg btn-primary btn-block" type="submit" name="admin_login">
 
-                Log in
+                Entrar
 
             </button>
 
+            </form><!-- form-login Termina -->
 
-        </form><!-- form-login Ends -->
+</div><!-- container Termina -->
 
-    </div><!-- container Ends -->
 
 
 
@@ -65,12 +65,12 @@ if (isset($_POST['admin_login'])) {
 
         $_SESSION['admin_email'] = $admin_email;
 
-        echo "<script>alert('You are Logged in into admin panel')</script>";
+        echo "<script>alert('Você está logado no painel de administração')</script>";
 
         echo "<script>window.open('index.php?dashboard','_self')</script>";
     } else {
 
-        echo "<script>alert('Email or Password is Wrong')</script>";
+        echo "<script>alert('E-mail ou senha estão errados')</script>";
     }
 }
 

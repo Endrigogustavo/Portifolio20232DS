@@ -25,7 +25,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_delete) {
 
-            echo "<script>alert('Customer Has Been Deleted')</script>";
+            echo "<script>alert('O cliente foi excluído')</script>";
 
             echo "<script>window.open('index.php?view_customers','_self')</script>";
         }

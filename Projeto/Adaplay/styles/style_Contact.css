@@ -56,6 +56,7 @@ a.btn {
 #lista_contato.hidden {
     display: none;
 }
+
 .table td,
 .table th {
     text-align: left;
@@ -92,10 +93,10 @@ td.btn_list {
 
 /* INPUT */
 .form-control.name {
-    background: url(../images/User.svg) no-repeat scroll 5px 5px ;
+    background: url(../images/User.svg) no-repeat scroll 5px 5px;
     background-color: white;
     padding-left: 2.2rem;
-    
+
 }
 
 .form-control.email {
@@ -110,21 +111,55 @@ td.btn_list {
     padding-left: 2.2rem;
 }
 
-.btn-success{
-        background: #ff7f32;
-        border-color: #ff7f32;
+.btn-success {
+    background: #ff7f32;
+    border-color: #ebebeb;
 }
 
-.form-row label{
+.form-row label {
     color: #000000;
 }
-section.images .circle { 
+
+
+.bear-image {
+    position: absolute;
+    bottom: 0;
+    right: 35px;
+    width: 22%;
+    height: auto;
+}
+
+section.images .circle {
     position: absolute;
     height: 80%;
     width: 100%;
     top: 20%;
     left: 0;
-    background: linear-gradient( #dd9980, #ff7f32);
+    background: linear-gradient(#dd9980, #ff7f32);
     clip-path: circle(40% at right 80%);
     z-index: -1;
 }
+
+@media (max-width:1200px){
+    .bear-image {
+        width: 25%;
+    }
+
+}
+
+@media (max-width:1332px){
+    .bear-image {
+        width: 21%;
+    }
+
+}
+
+@media (max-width:768px){
+    .bear-image {
+        display: none;
+    }
+
+}
+
+
+

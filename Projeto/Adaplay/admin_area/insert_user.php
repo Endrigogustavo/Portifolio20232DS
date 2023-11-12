@@ -10,173 +10,173 @@ if (!isset($_SESSION['admin_email'])) {
 ?>
 
 
-    <div class="row"><!-- 1  row Starts -->
+    <div class="row"><!-- 1 linha começa -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
+
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / Insert User
+                    <i class="fa fa-dashboard"></i> Dashboard / Inserir Usuário
 
                 </li>
 
 
 
-            </ol><!-- breadcrumb Ends -->
+            </ol><!-- breadcrumb Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 1  row Ends -->
+    </div><!-- Fim de 1 linha -->
 
-    <div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
                     <h3 class="panel-title">
 
-                        <i class="fa fa-money fa-fw"></i> Insert User
+                        <i class="fa fa-money fa-fw"></i> Inserir Usuário
 
                     </h3>
 
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
 
-                <div class="panel-body"><!-- panel-body Starts -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-                    <form class="form-horizontal" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
+                    <form class="form-horizontal" method="post" enctype="multipart/form-data"><!-- form-horizontal Inicia -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User Name: </label>
+                            <label class="col-md-3 control-label">Nome do Usuário: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="text" name="admin_name" class="form-control" required>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User Email: </label>
+                            <label class="col-md-3 control-label">Email do Usuário: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="text" name="admin_email" class="form-control" required>
+                            </div><!-- col-md-6 Termina -->
 
-                            </div><!-- col-md-6 Ends -->
-
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User Password: </label>
+                            <label class="col-md-3 control-label">Senha do Usuário: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="password" name="admin_pass" class="form-control" required>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User Country: </label>
+                            <label class="col-md-3 control-label">País do Usuário </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="text" name="admin_country" class="form-control" required>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User Job: </label>
+                            <label class="col-md-3 control-label">Trabalho do usuário: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="text" name="admin_job" class="form-control" required>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User Contact: </label>
+                            <label class="col-md-3 control-label">Contato do Usuário: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="text" name="admin_contact" class="form-control" required>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User About: </label>
+                            <label class="col-md-3 control-label">Sobre o Usuário: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <textarea name="admin_about" class="form-control" rows="3"> </textarea>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">User Image: </label>
+                            <label class="col-md-3 control-label">Imagem do Usuário: </label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
                                 <input type="file" name="admin_image" class="form-control" required>
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label"></label>
 
-                            <div class="col-md-6"><!-- col-md-6 Starts -->
+                            <div class="col-md-6"><!-- col-md-6 Inicia -->
 
-                                <input type="submit" name="submit" value="Insert User" class="btn btn-primary form-control">
+                                <input type="submit" name="submit" value="Inserir Usuário" class="btn btn-primary form-control">
 
-                            </div><!-- col-md-6 Ends -->
+                            </div><!-- col-md-6 Termina -->
 
-                        </div><!-- form-group Ends -->
-
-
-                    </form><!-- form-horizontal Ends -->
-
-                </div><!-- panel-body Ends -->
-
-            </div><!-- panel panel-default Ends -->
-
-        </div><!-- col-lg-12 Ends -->
+                        </div><!-- form-group Termina -->
 
 
-    </div><!-- 2 row Ends -->
+                    </form><!-- form-horizontal Termina -->
+
+                </div><!-- painel-body Termina -->
+
+            </div><!-- painel panel-default Termina -->
+
+        </div><!-- col-lg-12 Termina -->
+
+
+    </div><!-- Fim de 2 linhas -->
 
     <?php
 
@@ -210,7 +210,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_admin) {
 
-            echo "<script>alert('One User Has Been Inserted successfully')</script>";
+            echo "<script>alert('Um usuário foi inserido com sucesso')</script>";
 
             echo "<script>window.open('index.php?view_users','_self')</script>";
         }

@@ -1,188 +1,183 @@
 <?php
 
 
-if(!isset($_SESSION['admin_email'])){
+if (!isset($_SESSION['admin_email'])) {
 
-echo "<script>window.open('login.php','_self')</script>";
-
-}
-
-else {
+    echo "<script>window.open('login.php','_self')</script>";
+} else {
 
 
 ?>
 
-<?php
+    <?php
 
-if(isset($_GET['edit_manufacturer'])){
+    if (isset($_GET['edit_manufacturer'])) {
 
-$edit_manufacturer = $_GET['edit_manufacturer'];
+        $edit_manufacturer = $_GET['edit_manufacturer'];
 
-$get_manufacturer = "select * from manufacturers where manufacturer_id='$edit_manufacturer'";
+        $get_manufacturer = "select * from manufacturers where manufacturer_id='$edit_manufacturer'";
 
-$run_manufacturer = mysqli_query($con,$get_manufacturer);
+        $run_manufacturer = mysqli_query($con, $get_manufacturer);
 
-$row_manufacturer = mysqli_fetch_array($run_manufacturer);
+        $row_manufacturer = mysqli_fetch_array($run_manufacturer);
 
-$m_id = $row_manufacturer['manufacturer_id'];
+        $m_id = $row_manufacturer['manufacturer_id'];
 
-$m_title = $row_manufacturer['manufacturer_title'];
+        $m_title = $row_manufacturer['manufacturer_title'];
 
-$m_top = $row_manufacturer['manufacturer_top'];
+        $m_top = $row_manufacturer['manufacturer_top'];
 
-$m_image = $row_manufacturer['manufacturer_image'];
+        $m_image = $row_manufacturer['manufacturer_image'];
 
-$new_m_image = $row_manufacturer['manufacturer_image'];
+        $new_m_image = $row_manufacturer['manufacturer_image'];
+    }
 
 
-}
+    ?>
+    <div class="row"><!-- 1 row Começa -->
 
+        <div class="col-lg-12"><!-- col-lg-12 Começa -->
 
-?>
+            <ol class="breadcrumb"><!-- breadcrumb Começa -->
 
-<div class="row"><!-- 1 row Starts -->
+                <li class="active">
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+                    <i class="fa fa-dashboard"></i> Painel / Editar Fabricante
 
-<ol class="breadcrumb"><!-- breadcrumb Starts -->
+                </li>
 
-<li class="active">
+            </ol><!-- breadcrumb Termina -->
 
-<i class="fa fa-dashboard"></i> Dashboard / Edit Manufacturer
+        </div><!-- col-lg-12 Termina -->
 
-</li>
+    </div><!-- 1 row Termina -->
 
-</ol><!-- breadcrumb Ends -->
 
-</div><!-- col-lg-12 Ends -->
+    <div class="row"><!-- 2 row Começa -->
 
-</div><!-- 1 row Ends -->
+        <div class="col-lg-12"><!-- col-lg-12 Começa -->
 
+            <div class="panel panel-default"><!-- panel panel-default Começa -->
 
-<div class="row"><!-- 2 row Starts -->
+                <div class="panel-heading"><!-- panel-heading Começa -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+                    <h3 class="panel-title"><!-- panel-title Começa -->
 
-<div class="panel panel-default"><!-- panel panel-default Starts -->
+                        <i class="fa fa-money fa-fw"> </i> Editar Fabricante
 
-<div class="panel-heading"><!-- panel-heading Starts -->
+                    </h3><!-- panel-title Termina -->
 
-<h3 class="panel-title"><!-- panel-title Starts -->
+                </div><!-- panel-heading Termina -->
 
-<i class="fa fa-money fa-fw"> </i> Edit Manufacturer
+                <div class="panel-body"><!-- panel-body Começa -->
 
-</h3><!-- panel-title Ends -->
+                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data"><!-- form-horizontal Começa -->
 
-</div><!-- panel-heading Ends -->
+                        <div class="form-group"><!-- form-group Começa -->
 
-<div class="panel-body"><!-- panel-body Starts -->
+                            <label class="col-md-3 control-label"> Nome do Fabricante </label>
 
-<form class="form-horizontal" action="" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
+                            <div class="col-md-6">
 
-<div class="form-group"><!-- form-group Starts -->
+                                <input type="text" name="manufacturer_name" class="form-control" value="<?php echo $m_title; ?>">
 
-<label class="col-md-3 control-label"> Manufacturer Name </label>
+                            </div>
 
-<div class="col-md-6">
+                        </div><!-- form-group Termina -->
 
-<input type="text" name="manufacturer_name" class="form-control" value="<?php echo $m_title; ?>">
+                        <div class="form-group"><!-- form-group Começa -->
 
-</div>
+                            <label class="col-md-3 control-label"> Mostrar como Principais Fabricantes </label>
 
-</div><!-- form-group Ends -->
+                            <div class="col-md-6">
 
-<div class="form-group"><!-- form-group Starts -->
+                                <input type="radio" name="manufacturer_top" value="sim" <?php if ($m_top == 'não') {
+                                                                                        } else {
+                                                                                            echo "checked='checked'";
+                                                                                        } ?>>
 
-<label class="col-md-3 control-label"> Show as Top Manufacturers </label>
+                                <label> Sim </label>
 
-<div class="col-md-6">
+                                <input type="radio" name="manufacturer_top" value="não" <?php if ($m_top == 'não') {
+                                                                                            echo "checked='checked'";
+                                                                                        } else {
+                                                                                        } ?>>
 
-<input type="radio" name="manufacturer_top" value="yes" 
-<?php if($m_top == 'no'){}else{ echo "checked='checked'"; } ?> >
+                                <label> Não </label>
 
-<label> Yes </label>
+                            </div>
 
-<input type="radio" name="manufacturer_top" value="no" 
-<?php if($m_top == 'no'){ echo "checked='checked'"; }else{} ?> >
+                        </div><!-- form-group Termina -->
 
-<label> No </label>
+                        <div class="form-group"><!-- form-group Começa -->
 
-</div>
+                            <label class="col-md-3 control-label"> Selecione a Imagem do Fabricante </label>
 
-</div><!-- form-group Ends -->
+                            <div class="col-md-6">
 
-<div class="form-group"><!-- form-group Starts -->
+                                <input type="file" name="manufacturer_image" class="form-control">
 
-<label class="col-md-3 control-label"> Select Manufacturer Image </label>
+                                <br>
 
-<div class="col-md-6">
+                                <img src="other_images/<?php echo $m_image; ?>" width="70" height="70">
 
-<input type="file" name="manufacturer_image" class="form-control" >
+                            </div>
 
-<br>
+                        </div><!-- form-group Termina -->
 
-<img src="other_images/<?php echo $m_image; ?>" width="70" height="70">
+                        <div class="form-group"><!-- form-group Começa -->
 
-</div>
+                            <label class="col-md-3 control-label"> </label>
 
-</div><!-- form-group Ends -->
+                            <div class="col-md-6">
 
-<div class="form-group"><!-- form-group Starts -->
+                                <input type="submit" name="update" class="form-control btn btn-primary" value=" Atualizar Fabricante ">
 
-<label class="col-md-3 control-label"> </label>
+                            </div>
 
-<div class="col-md-6">
+                        </div><!-- form-group Termina -->
 
-<input type="submit" name="update" class="form-control btn btn-primary" value=" Update Manufacturer " >
+                    </form><!-- form-horizontal Termina -->
 
-</div>
+                </div><!-- panel-body Termina -->
 
-</div><!-- form-group Ends -->
+            </div><!-- panel panel-default Termina -->
 
-</form><!-- form-horizontal Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-</div><!-- panel-body Ends -->
+    </div><!-- 2 row Termina -->
 
-</div><!-- panel panel-default Ends -->
+    <?php
 
-</div><!-- col-lg-12 Ends -->
+    if (isset($_POST['update'])) {
 
-</div><!-- 2 row Ends -->
+        $manufacturer_name = $_POST['manufacturer_name'];
 
-<?php
+        $manufacturer_top = $_POST['manufacturer_top'];
 
-if(isset($_POST['update'])){
+        $manufacturer_image = $_FILES['manufacturer_image']['name'];
 
-$manufacturer_name = $_POST['manufacturer_name'];
+        $tmp_name = $_FILES['manufacturer_image']['tmp_name'];
 
-$manufacturer_top = $_POST['manufacturer_top'];
+        move_uploaded_file($tmp_name, "other_images/$manufacturer_image");
 
-$manufacturer_image = $_FILES['manufacturer_image']['name'];
+        if (empty($manufacturer_image)) {
 
-$tmp_name = $_FILES['manufacturer_image']['tmp_name'];
+            $manufacturer_image = $new_m_image;
+        }
 
-move_uploaded_file($tmp_name,"other_images/$manufacturer_image");
+        $update_manufacturer = "update manufacturers set manufacturer_title='$manufacturer_name',manufacturer_top='$manufacturer_top',manufacturer_image='$manufacturer_image' where manufacturer_id='$m_id'";
 
-if(empty($manufacturer_image)){
+        $run_manufacturer = mysqli_query($con, $update_manufacturer);
 
-$manufacturer_image = $new_m_image;
+        if ($run_manufacturer) {
 
-}
+            echo "<script>alert('Fabricante Foi Atualizado')</script>";
 
-$update_manufacturer = "update manufacturers set manufacturer_title='$manufacturer_name',manufacturer_top='$manufacturer_top',manufacturer_image='$manufacturer_image' where manufacturer_id='$m_id'";
+            echo "<script>window.open('index.php?view_manufacturers','_self')</script>";
+        }
+    }
 
-$run_manufacturer = mysqli_query($con,$update_manufacturer);
-
-if($run_manufacturer){
-
-echo "<script>alert('Manufacturer Has Been Updated')</script>";
-
-echo "<script>window.open('index.php?view_manufacturers','_self')</script>";
-
-}
-
-}
-
-?>
+    ?>
 
 <?php } ?>

@@ -1,0 +1,66 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+
+.myaccountpage{
+    height: 100vh;
+}
+
+.containeraccount {
+    margin: auto;
+    padding-top: 50px;
+}
+
+.containeraccount .panel{
+    background-color: #dbdbdb;
+}
+
+
+.containeraccount .panel-default>.panel-heading { /*Localização da Foto e do Nome*/
+    color: #333;
+    background-color: #dbdbdb;
+    border-color: #ddd;
+}
+
+.containeraccount .panel-default { /*Borda do COntainer*/
+    border-color: #a3a3a3;
+}
+
+.containeraccount .panel-body a {
+    color: black;
+}
+
+
+.containeraccount .panel-default>.panel-heading{
+    border-color: #ff6000;
+}
+
+.containeraccount .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #ff6000;
+}
+
+
+
+@media (min-width:768px) {
+    .containeraccount {
+      width: 750px
+    }
+  }
+  
+  @media (min-width:992px) {
+    .containeraccount {
+      width: 970px
+    }
+  }
+  
+  @media (min-width:1200px) {
+    .containeraccount {
+      width: 1170px
+    }
+  }

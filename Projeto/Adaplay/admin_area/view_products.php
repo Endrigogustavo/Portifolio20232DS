@@ -9,60 +9,59 @@ if (!isset($_SESSION['admin_email'])) {
 
 ?>
 
+    <div class="row"><!-- 1 linha começa -->
 
-    <div class="row"><!--  1 row Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
-
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
-
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / View Products
+                    <i class="fa fa-dashboard"></i> Dashboard / Ver Produtos
 
                 </li>
 
-            </ol><!-- breadcrumb Ends -->
 
-        </div><!-- col-lg-12 Ends -->
+            </ol><!-- breadcrumb Termina -->
 
-    </div><!--  1 row Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    <div class="row"><!-- 2 row Starts -->
+    </div><!-- Fim de 1 linha -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+    <div class="row"><!-- Início de 2 linhas -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
-                    <h3 class="panel-title"><!-- panel-title Starts -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
 
-                        <i class="fa fa-money fa-fw"></i> View Products
+                        <i class="fa fa-money fa-fw"></i> Ver Produtos
 
-                    </h3><!-- panel-title Ends -->
+                    </h3><!-- panel-title Termina -->
 
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
-                <div class="panel-body"><!-- panel-body Starts -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-                    <div class="table-responsive"><!-- table-responsive Starts -->
+                    <div class="table-responsive"><!-- table-responsive Inicia -->
 
-                        <table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
+                        <table class="table table-bordered table-hover table-striped">
+                            <!-- table table-bordered table-hover table-striped Inicia -->
 
                             <thead>
 
                                 <tr>
                                     <th>#</th>
-                                    <th>Title</th>
-                                    <th>Image</th>
-                                    <th>Price</th>
-                                    <th>Sold</th>
-                                    <th>Keywords</th>
-                                    <th>Date</th>
-                                    <th>Delete</th>
-                                    <th>Edit</th>
+                                    <th>Título</th>
+                                    <th>Imagem</th>
+                                    <th>Preço</th>
+                                    <th>Vendido</th>
+                                    <th>Palavras-Chave</th>
+                                    <th>Data</th>
+                                    <th>Deletar</th>
+                                    <th>Editar</th>
 
 
 
@@ -100,13 +99,19 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     <tr>
 
-                                        <td><?php echo $i; ?></td>
+                                        <td>
+                                            <?php echo $i; ?>
+                                        </td>
 
-                                        <td><?php echo $pro_title; ?></td>
+                                        <td>
+                                            <?php echo $pro_title; ?>
+                                        </td>
 
                                         <td><img src="product_images/<?php echo $pro_image; ?>" width="60" height="60"></td>
 
-                                        <td>$ <?php echo $pro_price; ?></td>
+                                        <td>R$
+                                            <?php echo $pro_price; ?>
+                                        </td>
 
                                         <td>
                                             <?php
@@ -118,15 +123,19 @@ if (!isset($_SESSION['admin_email'])) {
                                             ?>
                                         </td>
 
-                                        <td> <?php echo $pro_keywords; ?> </td>
+                                        <td>
+                                            <?php echo $pro_keywords; ?>
+                                        </td>
 
-                                        <td><?php echo $pro_date; ?></td>
+                                        <td>
+                                            <?php echo $pro_date; ?>
+                                        </td>
 
                                         <td>
 
                                             <a href="index.php?delete_product=<?php echo $pro_id; ?>">
 
-                                                <i class="fa fa-trash-o"> </i> Delete
+                                                <i class="fa fa-trash-o"> </i> Deletar
 
                                             </a>
 
@@ -136,7 +145,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                             <a href="index.php?edit_product=<?php echo $pro_id; ?>">
 
-                                                <i class="fa fa-pencil"> </i> Edit
+                                                <i class="fa fa-pencil"> </i> Editar
 
                                             </a>
 
@@ -152,16 +161,15 @@ if (!isset($_SESSION['admin_email'])) {
 
                         </table><!-- table table-bordered table-hover table-striped Ends -->
 
-                    </div><!-- table-responsive Ends -->
+                    </div><!-- Fim responsivo à tabela -->
 
-                </div><!-- panel-body Ends -->
+                </div><!-- painel-body Termina -->
 
-            </div><!-- panel panel-default Ends -->
+            </div><!-- painel panel-default Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 2 row Ends -->
-
+    </div><!-- Fim de 2 linhas -->
 
 
 

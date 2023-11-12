@@ -1,5 +1,5 @@
 
-//Banner Slider
+//Controle deslizante de banner
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     loop: true,
@@ -17,7 +17,7 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 
-//Logo Slider
+//Controle deslizante do logotipo
 var copy = document.querySelector(".logosom-slide").cloneNode(true);
       document.querySelector(".logosom").appendChild(copy);
 

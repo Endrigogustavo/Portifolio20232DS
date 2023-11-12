@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 html {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   line-height: 1.15;
@@ -163,6 +164,13 @@ button::-moz-focus-inner {
 [type="submit"]:-moz-focusring,
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
+}
+
+#deletebutton {
+  /*CSS do Botão de Delete*/
+  border: none;
+  font-size: 1.5em;
+  color: #ff3232;
 }
 
 fieldset {
@@ -389,12 +397,22 @@ img {
   height: auto;
 }
 
+.icon-image {
+  width: 20px;
+  /* Largura desejada para o ícone */
+  height: auto;
+  /* Isso manterá a proporção da imagem */
+  margin-left: 5px;
+  /* Ajuste conforme necessário para o alinhamento horizontal */
+}
+
 @-webkit-keyframes a {
   0% {
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     opacity: 0;
   }
+
   to {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
@@ -408,6 +426,7 @@ img {
     transform: scaleY(0);
     opacity: 0;
   }
+
   to {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
@@ -636,7 +655,7 @@ img {
 .line-footer {
   background-color: #ff7f32;
   height: 2px;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -680,7 +699,7 @@ img {
 }
 
 .page-footer .footer-nav__col .phone__number {
-  color: #00c8c8;
+  color: #11111f;
   font-size: 14px;
   text-decoration: underline;
   -webkit-transition: color 0.2s;
@@ -697,7 +716,7 @@ img {
 }
 
 .page-footer .footer-nav__col .email__addr {
-  color: #00c8c8;
+  color: #11111f;
   font-size: 14px;
   text-decoration: underline;
   -webkit-transition: color 0.2s;
@@ -923,7 +942,7 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  background: #666 url("../images/banner-ave.jpg") no-repeat;
+  background: #666 url("../images/BACKGROUNDBanner.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -1101,6 +1120,7 @@ nav {
   display: flex;
   align-items: center;
 }
+
 .nav-icon i {
   margin-right: 20px;
   color: var(--color-texto);
@@ -1194,13 +1214,14 @@ nav {
   text-decoration: none;
 }
 
+/* Responsividade-css */
+
 @media (max-width: 1275px) {
   .logozinha span {
-    visibility: hidden;
+    display: none;
   }
 }
 
-/* Responsive-css */
 @media (max-width: 890px) {
   nav {
     padding: 20px 3%;
@@ -1239,6 +1260,7 @@ nav {
   }
 
   .navmenuzin {
+    justify-content: normal;
     position: absolute;
     top: 100%;
     right: -100%;
@@ -1272,6 +1294,48 @@ nav {
   }
 
   .logozinha span {
-    visibility: visible;
+    display: inline;
   }
+}
+
+@media (max-width: 399px) {
+  .logozinha span {
+    display: none;
+  }
+}
+
+#carrinhoVazio {
+  display: none;
+  text-align: center;
+  margin-top: 13vh;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #ccc; /* Borda para um visual mais minimalista */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#carrinhoVazio p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#continuarComprandoBtn {
+  display: inline-block;
+  font-size: 16px;
+  background-color: #ff7f32;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+#continuarComprandoBtn i {
+  margin-right: 8px;
+}
+
+#continuarComprandoBtn:hover {
+  background-color: #00c8c8;
 }

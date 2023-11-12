@@ -20,7 +20,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_delete) {
 
-            echo "<script> alert('One Category Has Been Deleted') </script>";
+            echo "<script> alert('Uma categoria foi excluída') </script>";
 
             echo "<script>window.open('index.php?view_cats','_self')</script>";
         }

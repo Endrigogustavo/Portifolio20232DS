@@ -1,153 +1,164 @@
 <?php
 
 
-if(!isset($_SESSION['admin_email'])){
+if (!isset($_SESSION['admin_email'])) {
 
-echo "<script>window.open('login.php','_self')</script>";
-
-}
-
-else {
+    echo "<script>window.open('login.php','_self')</script>";
+} else {
 
 
 ?>
 
 
-<div class="row"><!-- 1 row Starts -->
+    <div class="row"><!-- 1 linha começa -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-<ol class="breadcrumb"><!-- breadcrumb Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
-<li class="active">
+                <li class="active">
 
-<i class="fa fa-dashboard"></i> Dashboard / View Payments
+                    <i class="fa fa-dashboard"></i> Dashboard / Ver Pagamentos
 
-</li>
+                </li>
 
-</ol><!-- breadcrumb Ends -->
+            </ol><!-- breadcrumb Termina -->
 
-</div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-</div><!-- 1 row Ends -->
+    </div><!-- Fim de 1 linha -->
 
 
-<div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-<div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-<div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
-<h3 class="panel-title"><!-- panel-title Starts -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
 
-<i class="fa fa-money fa-fw"> </i> View Payments
+                        <i class="fa fa-money fa-fw"> </i> Ver Pagamentos
+                    </h3><!-- panel-title Termina -->
 
-</h3><!-- panel-title Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
-</div><!-- panel-heading Ends -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-<div class="panel-body"><!-- panel-body Starts -->
+                    <div class="table-responsive"><!-- table-responsive Inicia -->
 
-<div class="table-responsive"><!-- table-responsive Starts -->
+                        <table class="table table-hover table-bordered table-striped">
+                            <!-- table table-hover table-bordered table-striped Starts -->
 
-<table class="table table-hover table-bordered table-striped"><!-- table table-hover table-bordered table-striped Starts -->
+                            <thead><!-- thead Inicia -->
 
-<thead><!-- thead Starts -->
+                                <tr>
 
-<tr>
+                                    <th>#</th>
+                                    <th>Fatura</th>
+                                    <th>Quantia Paga</th>
+                                    <th>Metodo de Pagamento</th>
+                                    <th>Referencia #</th>
+                                    <th>Código do Pagamento</th>
+                                    <th>Data do Pagamento</th>
+                                    <th>Ação</th>
 
-<th>#</th>
-<th>Invoice No</th>
-<th>Amount Paid</th>
-<th>Payment Method</th>
-<th>Reference #</th>
-<th>Payment Code</th>
-<th>Payment Date</th>
-<th>Action</th>
+                                </tr>
 
-</tr>
+                            </thead><!-- thead Termina -->
 
-</thead><!-- thead Ends -->
+                            <tbody><!-- tbody Inicia -->
 
-<tbody><!-- tbody Starts -->
+                                <?php
 
-<?php
+                                $i = 0;
 
-$i = 0;
+                                $get_payments = "select * from payments";
 
-$get_payments = "select * from payments";
+                                $run_payments = mysqli_query($con, $get_payments);
 
-$run_payments = mysqli_query($con,$get_payments);
+                                while ($row_payments = mysqli_fetch_array($run_payments)) {
 
-while($row_payments = mysqli_fetch_array($run_payments)){
+                                    $payment_id = $row_payments['payment_id'];
 
-$payment_id = $row_payments['payment_id'];
+                                    $invoice_no = $row_payments['invoice_no'];
 
-$invoice_no = $row_payments['invoice_no'];
+                                    $amount = $row_payments['amount'];
 
-$amount = $row_payments['amount'];
+                                    $payment_mode = $row_payments['payment_mode'];
 
-$payment_mode = $row_payments['payment_mode'];
+                                    $ref_no = $row_payments['ref_no'];
 
-$ref_no = $row_payments['ref_no'];
+                                    $code = $row_payments['code'];
 
-$code = $row_payments['code'];
+                                    $payment_date = $row_payments['payment_date'];
 
-$payment_date = $row_payments['payment_date'];
+                                    $i++;
 
-$i++;
 
+                                ?>
 
-?>
 
+                                    <tr>
 
-<tr>
+                                        <td>
+                                            <?php echo $i; ?>
+                                        </td>
 
-<td><?php echo $i; ?></td>
+                                        <td bgcolor="yellow">
+                                            <?php echo $invoice_no; ?>
+                                        </td>
 
-<td bgcolor="yellow" ><?php echo $invoice_no; ?></td>
+                                        <td>R$
+                                            <?php echo $amount; ?>
+                                        </td>
 
-<td>$<?php echo $amount; ?></td>
+                                        <td>
+                                            <?php echo $payment_mode; ?>
+                                        </td>
 
-<td><?php echo $payment_mode; ?></td>
+                                        <td>
+                                            <?php echo $ref_no; ?>
+                                        </td>
 
-<td><?php echo $ref_no; ?></td>
+                                        <td>
+                                            <?php echo $code; ?>
+                                        </td>
 
-<td><?php echo $code; ?></td>
+                                        <td>
+                                            <?php echo $payment_date; ?>
+                                        </td>
 
-<td><?php echo $payment_date; ?></td>
+                                        <td>
 
-<td>
+                                            <a href="index.php?payment_delete=<?php echo $payment_id; ?>">
 
-<a href="index.php?payment_delete=<?php echo $payment_id; ?>" >
+                                                <i class="fa fa-trash-o"></i> Deletar
 
-<i class="fa fa-trash-o" ></i> Delete
+                                            </a>
 
-</a>
+                                        </td>
 
-</td>
 
+                                    </tr>
 
-</tr>
 
+                                <?php } ?>
 
-<?php } ?>
+                            </tbody><!-- tbody Termina -->
 
-</tbody><!-- tbody Ends -->
+                        </table><!-- table table-hover table-bordered table-striped Ends -->
 
-</table><!-- table table-hover table-bordered table-striped Ends -->
+                    </div><!-- Fim responsivo à tabela -->
 
-</div><!-- table-responsive Ends -->
+                </div><!-- painel-body Termina -->
 
-</div><!-- panel-body Ends -->
+            </div><!-- painel panel-default Termina -->
 
-</div><!-- panel panel-default Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-</div><!-- col-lg-12 Ends -->
-
-</div><!-- 2 row Ends -->
+    </div><!-- Fim de 2 linhas -->
 
 
 <?php } ?>

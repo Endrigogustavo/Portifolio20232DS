@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap");
+
+* {
+  font-family: "Lato", Helvetica, Arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Estilos do formulário */
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+select {
+  height: 40px;
+}
+
+/* Estilos do resumo do pedido */
+.order-summary {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.order-summary h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.order-summary .order-item:last-child span {
+  font-weight: bold;
+}
+
+/* Estilos de pagamento */
+.payment-method {
+  margin-top: 20px;
+}
+
+.payment-method label {
+  font-weight: normal;
+}
+
+/* Estilos do botão "Pagar Agora" */
+.lead a {
+  display: inline-block;
+  background: linear-gradient(45deg, #063086, #2b5fc8);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Estilos para informações adicionais de pagamento fictícias */
+.payment-details {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.payment-details label {
+  display: block;
+  font-weight: bold;
+}
+
+.product-image {
+  object-fit: cover; /* Para ajustar a imagem dentro do espaço */
+  border: 1px solid #ccc; /* Adicione uma borda, se desejar */
+  border-radius: 5px; /* Adicione bordas arredondadas, se desejar */
+}
+
+/* Adicione este código ao seu arquivo CSS (creditcard.css) ou em um novo arquivo CSS */
+.product-info {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+  margin-right: 30px; /* Espaçamento entre a imagem e as especificações */
+}
+
+.product-details {
+  flex: 1;
+  word-wrap: break-word; /* Adicione esta propriedade */
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-specs {
+  font-size: 14px;
+  color: #666;
+}
+
+.creditcard {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  padding-bottom: 60px;
+}
+
+.creditcard form {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 600px;
+  padding-top: 160px;
+}
+
+.creditcard form .inputBox {
+  margin-top: 20px;
+}
+
+.creditcard form .inputBox span {
+  display: block;
+  color: #999;
+  padding-bottom: 5px;
+}
+
+.creditcard form .inputBox input,
+.creditcard form .inputBox select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #444;
+}
+
+.creditcard form .flexbox {
+  display: flex;
+  gap: 15px;
+}
+
+.creditcard form .flexbox .inputBox {
+  flex: 1 1 150px;
+}
+
+.creditcard .card-container {
+  margin-bottom: -150px;
+  position: relative;
+  height: 250px;
+  width: 400px;
+}
+
+.creditcard .card-container .front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #063086, #2b5fc8);
+  border-radius: 5px;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.4s ease-out;
+}
+
+.creditcard .card-container .front .image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.creditcard .card-container .front .image img {
+  height: 50px;
+}
+
+.creditcard .card-container .front .card-number-box {
+  padding: 30px 0;
+  font-size: 22px;
+  color: #fff;
+}
+
+.creditcard .card-container .front .flexbox {
+  display: flex;
+}
+
+.creditcard .card-container .front .flexbox .box:nth-child(1) {
+  margin-right: auto;
+}
+
+.creditcard .card-container .front .flexbox .box {
+  font-size: 15px;
+  color: #fff;
+}
+
+.creditcard .card-container .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #063086, #2b5fc8);
+  border-radius: 5px;
+  padding: 20px 0;
+  text-align: right;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.4s ease-out;
+}
+
+.creditcard .card-container .back .stripe {
+  background: #000;
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+}
+
+.creditcard .card-container .back .box {
+  padding: 0 20px;
+}
+
+.creditcard .card-container .back .box span {
+  color: #fff;
+  font-size: 15px;
+}
+
+.creditcard .card-container .back .box .cvv-box {
+  height: 50px;
+  padding: 10px;
+  margin-top: 5px;
+  color: #333;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.creditcard .card-container .back .box img {
+  margin-top: 30px;
+  height: 30px;
+}
+
+.panel-footer {
+  margin-top: 7vh;
+  display: flex;
+  width: 100%;
+  height: 96px;
+  background-color: #eee;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+}
+
+.back-btn {
+  color: #03555d;
+  background: #fff;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+.blue-border {
+  border: 1px solid #03555d;
+}
+.warning {
+  border-color: #03555d;
+}
+
+/* Estilo para mensagem de erro */
+.error-message {
+  color: red;
+  margin-top: 25px;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .creditcard form {
+    width: 100%;
+  }
+
+  .creditcard .card-container {
+    width: 80%;
+  }
+
+  .creditcard .card-container .front,
+  .creditcard .card-container .back {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .creditcard form {
+    padding-top: 120px;
+  }
+
+  .creditcard form .flexbox {
+    display: block; /* Remova o display flex */
+  }
+
+  .creditcard form .flexbox .inputBox {
+    flex: 0 0 auto; /* Remova a propriedade flex dos elementos */
+  }
+
+  .creditcard .card-container {
+    width: 315px;
+  }
+}
+
+@media (max-width: 327px) {
+  .creditcard form {
+    padding-top: 120px;
+  }
+
+  .creditcard form .flexbox {
+    display: block; /* Remova o display flex */
+  }
+
+  .creditcard form .flexbox .inputBox {
+    flex: 0 0 auto; /* Remova a propriedade flex dos elementos */
+  }
+
+  .creditcard .card-container {
+    width: 290px;
+  }
+}
+
+@media (max-width: 345px) {
+  .lead a {
+    font-size: 15px; /* Reduz o tamanho da fonte dos botões */
+    padding: 8px 15px; /* Reduz o preenchimento dos botões */
+  }
+}
+
+@media (max-width: 393px) {
+  h1 {
+    font-size: 23px; /* Reduz o tamanho da fonte do h1 */
+  }
+}

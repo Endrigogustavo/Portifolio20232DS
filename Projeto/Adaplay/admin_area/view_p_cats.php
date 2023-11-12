@@ -1,137 +1,140 @@
 <?php
 
-if(!isset($_SESSION['admin_email'])){
+if (!isset($_SESSION['admin_email'])) {
 
-echo "<script>window.open('login.php','_self')</script>";
+    echo "<script>window.open('login.php','_self')</script>";
+} else {
 
-}
+    ?>
 
-else {
 
-?>
+    <div class="row"><!-- 1 linha começa -->
 
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-<div class="row"><!-- 1 row Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+                <li class="active">
 
-<ol class="breadcrumb"><!-- breadcrumb Starts -->
+                    <i class="fa fa-dashboard"></i> Dashboard / Ver Categoria de Produtos
 
-<li class="active">
+                </li>
 
-<i class="fa fa-dashboard"></i> Dashboard / View Products Categories
+            </ol><!-- breadcrumb Termina -->
 
-</li>
+        </div><!-- col-lg-12 Termina -->
 
-</ol><!-- breadcrumb Ends -->
+    </div><!-- Fim de 1 linha -->
 
-</div><!-- col-lg-12 Ends -->
 
-</div><!-- 1 row Ends -->
+    <div class="row"><!-- Início de 2 linhas -->
 
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-<div class="row"><!-- 2 row Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-<div class="col-lg-12"><!-- col-lg-12 Starts -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
-<div class="panel panel-default"><!-- panel panel-default Starts -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
 
-<div class="panel-heading"><!-- panel-heading Starts -->
+                        <i class="fa fa-money fa-fw"> </i> Ver Categoria de Produtos
 
-<h3 class="panel-title"><!-- panel-title Starts -->
+                    </h3><!-- panel-title Termina -->
 
-<i class="fa fa-money fa-fw"> </i> View Products Categories
+                </div><!-- cabeçalho do painel Termina -->
 
-</h3><!-- panel-title Ends -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-</div><!-- panel-heading Ends -->
+                    <div class="table-responsive"><!-- table-responsive Inicia -->
 
-<div class="panel-body"><!-- panel-body Starts -->
+                        <table class="table table-bordered table-hover table-striped">
+                            <!-- table table-bordered table-hover table-striped Starts -->
 
-<div class="table-responsive"><!-- table-responsive Starts -->
+                            <thead><!-- thead Inicia -->
 
-<table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
+                                <tr>
 
-<thead><!-- thead Starts -->
+                                    <th>#</th>
+                                    <th>Nome</th>
+                                    <th>Deletar</th>
+                                    <th>Editar</th>
 
-<tr>
 
-<th>#</th>
-<th>Name</th>
-<th>Delete</th>
-<th>Edit</th>
+                                </tr>
 
+                            </thead><!-- thead Termina -->
 
-</tr>
+                            <tbody><!-- tbody Inicia -->
 
-</thead><!-- thead Ends -->
+                                <?php
 
-<tbody><!-- tbody Starts -->
+                                $i = 0;
 
-<?php
+                                $get_p_cats = "select * from product_categories";
 
-$i=0;
+                                $run_p_cats = mysqli_query($con, $get_p_cats);
 
-$get_p_cats = "select * from product_categories";
+                                while ($row_p_cats = mysqli_fetch_array($run_p_cats)) {
 
-$run_p_cats = mysqli_query($con,$get_p_cats);
+                                    $p_cat_id = $row_p_cats['p_cat_id'];
 
-while($row_p_cats = mysqli_fetch_array($run_p_cats)){
+                                    $p_cat_title = $row_p_cats['p_cat_title'];
 
-$p_cat_id = $row_p_cats['p_cat_id'];
 
-$p_cat_title = $row_p_cats['p_cat_title'];
+                                    $i++;
 
+                                    ?>
 
-$i++;
+                                    <tr>
 
-?>
+                                        <td>
+                                            <?php echo $i; ?>
+                                        </td>
 
-<tr>
+                                        <td>
+                                            <?php echo $p_cat_title; ?>
+                                        </td>
 
-<td> <?php echo $i; ?> </td>
 
-<td> <?php echo $p_cat_title; ?> </td>
+                                        <td>
 
+                                            <a href="index.php?delete_p_cat=<?php echo $p_cat_id; ?>">
 
-<td> 
+                                                <i class="fa fa-trash-o"></i> Deletar
 
-<a href="index.php?delete_p_cat=<?php echo $p_cat_id; ?>">
+                                            </a>
 
-<i class="fa fa-trash-o"></i> Delete
+                                        </td>
 
-</a>
+                                        <td>
 
-</td>
+                                            <a href="index.php?edit_p_cat=<?php echo $p_cat_id; ?>">
 
-<td> 
+                                                <i class="fa fa-pencil"></i> Editar
 
-<a href="index.php?edit_p_cat=<?php echo $p_cat_id; ?>">
+                                            </a>
 
-<i class="fa fa-pencil"></i> Edit
+                                        </td>
 
-</a>
 
-</td>
+                                    </tr>
 
+                                <?php } ?>
 
-</tr>
 
-<?php } ?>
+                            </tbody><!-- tbody Termina -->
 
-</tbody><!-- tbody Ends -->
+                        </table><!-- table table-bordered table-hover table-striped Ends -->
 
-</table><!-- table table-bordered table-hover table-striped Ends -->
+                    </div><!-- Fim responsivo à tabela -->
 
-</div><!-- table-responsive Ends -->
+                </div><!-- painel-body Termina -->
 
-</div><!-- panel-body Ends -->
+            </div><!-- painel panel-default Termina -->
 
-</div><!-- panel panel-default Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-</div><!-- col-lg-12 Ends -->
-
-</div><!-- 2 row Ends -->
+    </div><!-- Fim de 2 linhas -->
 
 
 

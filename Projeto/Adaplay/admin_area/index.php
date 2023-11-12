@@ -59,16 +59,16 @@ if (!isset($_SESSION['admin_email'])) {
     $count_total_orders = mysqli_num_rows($run_total_orders);
 
 
-    $get_pending_orders = "SELECT * FROM customer_orders WHERE order_status='pending'";
+    $get_pending_orders = "SELECT * FROM customer_orders WHERE order_status='Pago'";
     $run_pending_orders = mysqli_query($con, $get_pending_orders);
     $count_pending_orders = mysqli_num_rows($run_pending_orders);
 
-    $get_completed_orders = "SELECT * FROM customer_orders WHERE order_status='Complete'";
+    $get_completed_orders = "SELECT * FROM customer_orders WHERE order_status='Pago'";
     $run_completed_orders = mysqli_query($con, $get_completed_orders);
     $count_completed_orders = mysqli_num_rows($run_completed_orders);
 
 
-    $get_total_earnings = "SELECT SUM( due_amount) as Total FROM customer_orders WHERE order_status = 'Complete'";
+    $get_total_earnings = "SELECT SUM( due_amount) as Total FROM customer_orders WHERE order_status = 'Pago'";
     $run_total_earnings = mysqli_query($con, $get_total_earnings);
     $row = mysqli_fetch_assoc($run_total_earnings);
     $count_total_earnings = $row['Total'];
@@ -87,7 +87,7 @@ if (!isset($_SESSION['admin_email'])) {
 
     <head>
 
-        <title>Admin Panel</title>
+        <title>Painel do Administrador</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -100,13 +100,13 @@ if (!isset($_SESSION['admin_email'])) {
 
     <body>
 
-        <div id="wrapper"><!-- wrapper Starts -->
+        <div id="wrapper"><!-- wrapper inicia -->
 
             <?php include("includes/sidebar.php");  ?>
 
-            <div id="page-wrapper"><!-- page-wrapper Starts -->
+            <div id="page-wrapper"><!-- page-wrapper Inicia -->
 
-                <div class="container-fluid"><!-- container-fluid Starts -->
+                <div class="container-fluid"><!-- container-fluid é iniciado -->
 
                     <?php
 
@@ -173,28 +173,6 @@ if (!isset($_SESSION['admin_email'])) {
                     if (isset($_GET['edit_cat'])) {
 
                         include("edit_cat.php");
-                    }
-
-                    if (isset($_GET['insert_slide'])) {
-
-                        include("insert_slide.php");
-                    }
-
-
-                    if (isset($_GET['view_slides'])) {
-
-                        include("view_slides.php");
-                    }
-
-                    if (isset($_GET['delete_slide'])) {
-
-                        include("delete_slide.php");
-                    }
-
-
-                    if (isset($_GET['edit_slide'])) {
-
-                        include("edit_slide.php");
                     }
 
 
@@ -318,96 +296,9 @@ if (!isset($_SESSION['admin_email'])) {
                         include("edit_coupon.php");
                     }
 
-
-                    if (isset($_GET['insert_icon'])) {
-
-                        include("insert_icon.php");
-                    }
-
-
-                    if (isset($_GET['view_icons'])) {
-
-                        include("view_icons.php");
-                    }
-
-                    if (isset($_GET['delete_icon'])) {
-
-                        include("delete_icon.php");
-                    }
-
-                    if (isset($_GET['edit_icon'])) {
-
-                        include("edit_icon.php");
-                    }
-
-                    if (isset($_GET['insert_bundle'])) {
-
-                        include("insert_bundle.php");
-                    }
-
-                    if (isset($_GET['view_bundles'])) {
-
-                        include("view_bundles.php");
-                    }
-
-                    if (isset($_GET['delete_bundle'])) {
-
-                        include("delete_bundle.php");
-                    }
-
-
-                    if (isset($_GET['edit_bundle'])) {
-
-                        include("edit_bundle.php");
-                    }
-
-
-                    if (isset($_GET['insert_rel'])) {
-
-                        include("insert_rel.php");
-                    }
-
-                    if (isset($_GET['view_rel'])) {
-
-                        include("view_rel.php");
-                    }
-
-                    if (isset($_GET['delete_rel'])) {
-
-                        include("delete_rel.php");
-                    }
-
-
-                    if (isset($_GET['edit_rel'])) {
-
-                        include("edit_rel.php");
-                    }
-
-
                     if (isset($_GET['edit_contact_us'])) {
 
                         include("edit_contact_us.php");
-                    }
-
-                    if (isset($_GET['insert_enquiry'])) {
-
-                        include("insert_enquiry.php");
-                    }
-
-
-                    if (isset($_GET['view_enquiry'])) {
-
-                        include("view_enquiry.php");
-                    }
-
-                    if (isset($_GET['delete_enquiry'])) {
-
-                        include("delete_enquiry.php");
-                    }
-
-                    if (isset($_GET['edit_enquiry'])) {
-
-                        include("edit_enquiry.php");
                     }
 
 
@@ -418,11 +309,11 @@ if (!isset($_SESSION['admin_email'])) {
 
                     ?>
 
-                </div><!-- container-fluid Ends -->
+                </div><!-- container-fluid Termina -->
 
-            </div><!-- page-wrapper Ends -->
+            </div><!-- page-wrapper Termina -->
 
-        </div><!-- wrapper Ends -->
+        </div><!-- fim do wrapper -->
 
         <script src="js/jquery.min.js"></script>
 

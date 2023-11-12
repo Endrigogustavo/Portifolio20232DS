@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_delete) {
 
-            echo "<script>alert('One Coupon Has Been Deleted')</script>";
+            echo "<script>alert('Um cupom foi excluído')</script>";
 
             echo "<script> window.open('index.php?view_coupons','_self') </script>";
         }

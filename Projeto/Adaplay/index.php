@@ -12,6 +12,7 @@ $products = "shop.php";
 $contato = "contact.php";
 $logout = "logout.php";
 $checkout = "checkout.php";
+$sobrenos = "about.php";
 
 
 include("includes/db.php");
@@ -31,7 +32,7 @@ include("includes/main.php");
   <div class="wrapperzin swiper-wrapper">
 
     <div class="slidezin swiper-slide">
-      <img src="images/1r.png" alt="" class="image" />
+      <img src="images/Carrossel/1r.png" alt="" class="image" />
       <div class="image-data">
         <h2>ADAPLAY</h2>
         <span class="text">Fazendo o mundo um lugar mais inclusivo para todos</span>
@@ -41,7 +42,7 @@ include("includes/main.php");
     </div>
 
     <div class="slidezin swiper-slide">
-      <img src="images/2.jpg" alt="" class="image" />
+      <img src="images/Carrossel/2.jpg" alt="" class="image" />
       <div class="image-data">
         <h2>Bandai Namco</h2>
         <span class="text">Direto da terra do Sol nascente pro Ociente, aproveite agora os lançamentos </span>
@@ -51,7 +52,7 @@ include("includes/main.php");
     </div>
 
     <div class="slidezin swiper-slide">
-      <img src="images/3.jpg" alt="" class="image" />
+      <img src="images/Carrossel/3.jpg" alt="" class="image" />
       <div class="image-data">
         <h2>Brinquedos Adaptados </h2>
         <span class="text">Não existe nada como a imaginação de uma criança, e por isso não deve ser impedida</span>
@@ -78,6 +79,24 @@ include("includes/main.php");
     <img src="images/logos/6.png" />
     <img src="images/logos/7.png" />
     <img src="images/logos/8.png" />
+    <img src="images/logos/9.png" />
+    <img src="images/logos/10.png" />
+    <img src="images/logos/11.png" />
+  </div>
+</div>
+
+<div class="graphicbanner">
+  <div class="bannertext">
+    <h1>Brinque sem Limites</h1>
+    <p>
+      Nossa primeira loja foi concebida com adaptações tanto nos produtos quanto no site, visando oferecer a melhor
+      experiência aos clientes,
+      tornando a compra mais acessível e conveniente.
+    </p>
+    <a href="about.php"><button href="about.php">Sobre nós</button></a>
+  </div>
+  <div class="imagem">
+    <img src="images/banner1.png" alt="Produtos da Loja">
   </div>
 </div>
 
@@ -85,79 +104,108 @@ include("includes/main.php");
   <div class="textosin">
     <h1>Categorias</h1>
   </div>
-  <div class="categorias">
 
-    <div class="card">
+  <div class="conteudoscategoria">
+    <div class="categorias">
 
-      <div class="card-content">
+      <div class="card">
 
-        <h1>Adaptados</h1>
-        <p>Brinque sem Limites</p>
-        <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
+        <div class="card-content">
+
+          <h1>Adaptados</h1>
+          <p>Brinque sem Limites</p>
+          <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
+
+        </div>
+
+
+        <div class="card-img">
+          <img src="images/cards/card1.png">
+
+        </div>
 
       </div>
 
+      <div class="card">
 
-      <div class="card-img">
-        <img src="images/cards/card1.png" id="bugmaldito">
+        <div class="card-content">
+
+          <h1>Super Herói</h1>
+          <p>Brinque com Imaginação</p>
+          <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
+
+        </div>
+
+        <div class="card-img">
+          <img src="images/cards/card2.png">
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+
+          <h1>Esportes</h1>
+          <p>Brinque como profissional</p>
+          <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
+
+        </div>
+
+
+        <div class="card-img">
+          <img src="images/cards/card3.png">
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+
+          <h1>Recém Lançados</h1>
+          <p>Brinque com novidade</p>
+          <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
+
+        </div>
+
+
+        <div class="card-img">
+          <img src="images/cards/card4.png">
+
+        </div>
 
       </div>
 
     </div>
 
-    <div class="card">
+    <div class="cards3dcontainer">
+      <div class="card3d">
+        <div class="wrapper3d">
+          <img src="images/cards/3dcards/1a.png" class="cover-image" />
+        </div>
 
-      <div class="card-content">
-
-        <h1>Super Herói</h1>
-        <p>Brinque com Imaginação</p>
-        <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
-
+        <img src="images/cards/3dcards/1b.png" class="character" />
       </div>
 
-      <div class="card-img">
-        <img src="images/cards/card2.png">
+      <div class="card3d">
+        <div class="wrapper3d">
+          <img src="images/cards/3dcards/2a.png" class="cover-image" />
+        </div>
 
+        <img src="images/cards/3dcards/2b.png" class="character" />
       </div>
 
+      <div class="card3d">
+        <div class="wrapper3d">
+          <img src="images/cards/3dcards/3a.png" class="cover-image" />
+        </div>
+
+        <img src="images/cards/3dcards/3b.png" class="character" />
+      </div>
     </div>
-
-    <div class="card">
-
-      <div class="card-content">
-
-        <h1>Esportes</h1>
-        <p>Brinque como profissional</p>
-        <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
-
-      </div>
-
-
-      <div class="card-img">
-        <img src="images/cards/card3.png" id="bugmaldito">
-
-      </div>
-
-    </div>
-
-    <div class="card">
-
-      <div class="card-content">
-
-        <h1>Recém Lançados</h1>
-        <p>Brinque com novidade</p>
-        <a href="shop.php"><i class='bx bx-chevron-right'></i></a>
-
-      </div>
-
-
-      <div class="card-img">
-        <img src="images/cards/card4.png" id="bugmaldito">
-
-      </div>
-
-    </div>
-
 
   </div>
 </section>
@@ -279,16 +327,10 @@ include("includes/main.php");
     <div class="container clearfix">
 
       <div class="copyright">
-        &copy; <?php echo date("Y"); ?> ADAPLAY&trade;
+        &copy;
+        <?php echo date("Y"); ?> ADAPLAY&trade;
       </div>
 
-      <div class="developer">
-        All Rights Reserved
-      </div>
-
-      <div class="designby">
-        ADAPLAY
-      </div>
 
     </div>
   </div>

@@ -24,7 +24,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_delete) {
 
-            echo "<script>alert('Payment Has Been Deleted')</script>";
+            echo "<script>alert('O pagamento foi excluído')</script>";
 
             echo "<script>window.open('index.php?view_payments','_self')</script>";
         }

@@ -8,48 +8,46 @@ if (!isset($_SESSION['admin_email'])) {
 
 ?>
 
-    <div class="row"><!-- 1 row Starts -->
+    <div class="row"><!-- 1 linha começa -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
-
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
                 <li>
 
-                    <i class="fa fa-dashboard"></i> Dashboard / Insert Category
+                    <i class="fa fa-dashboard"></i> Dashboard / Inserir Categoria
 
                 </li>
 
-            </ol><!-- breadcrumb Ends -->
+            </ol><!-- breadcrumb Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 1 row Ends -->
+    </div><!-- Fim de 1 linha -->
 
 
-    <div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- cabeçalho do painel Inicia -->
 
-                    <h3 class="panel-title"><!-- panel-title Starts -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
+                        <i class="fa fa-money fa-fw"></i> Inserir Categoria
 
-                        <i class="fa fa-money fa-fw"></i> Insert Category
+                    </h3><!-- panel-title Termina -->
 
-                    </h3><!-- panel-title Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
-                </div><!-- panel-heading Ends -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-                <div class="panel-body"><!-- panel-body Starts -->
+                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data"><!-- form-horizontal Inicia -->
 
-                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data"><!-- form-horizontal Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                        <div class="form-group"><!-- form-group Starts -->
-
-                            <label class="col-md-3 control-label">Category Title</label>
+                            <label class="col-md-3 control-label">Titulo da Categoria</label>
 
                             <div class="col-md-6">
 
@@ -57,29 +55,29 @@ if (!isset($_SESSION['admin_email'])) {
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">Show as Category Top</label>
+                            <label class="col-md-3 control-label">Mostrar como Categoria Principal</label>
 
                             <div class="col-md-6">
 
-                                <input type="radio" name="cat_top" value="yes">
+                                <input type="radio" name="cat_top" value="sim">
 
-                                <label>Yes</label>
+                                <label>Sim</label>
 
-                                <input type="radio" name="cat_top" value="no">
+                                <input type="radio" name="cat_top" value="não">
 
-                                <label>No</label>
+                                <label>Não</label>
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
-                            <label class="col-md-3 control-label">Select Category Image</label>
+                            <label class="col-md-3 control-label">Selecione a Imagem da Categoria</label>
 
                             <div class="col-md-6">
 
@@ -87,29 +85,28 @@ if (!isset($_SESSION['admin_email'])) {
 
                             </div>
 
-                        </div><!-- form-group Ends -->
+                        </div><!-- form-group Termina -->
 
-                        <div class="form-group"><!-- form-group Starts -->
+                        <div class="form-group"><!-- form-group Inicia -->
 
                             <label class="col-md-3 control-label"></label>
 
                             <div class="col-md-6">
 
-                                <input type="submit" name="submit" value="Insert Category" class="btn btn-primary form-control">
+                                <input type="submit" name="submit" value="Inserir Categoria" class="btn btn-primary form-control">
 
                             </div>
+                 </div><!-- form-group Termina -->
 
-                        </div><!-- form-group Ends -->
+                </form><!-- form-horizontal Termina -->
 
-                    </form><!-- form-horizontal Ends -->
+                </div><!-- painel-body Termina -->
 
-                </div><!-- panel-body Ends -->
+                </div><!-- painel panel-default Termina -->
 
-            </div><!-- panel panel-default Ends -->
+                </div><!-- col-lg-12 Termina -->
 
-        </div><!-- col-lg-12 Ends -->
-
-    </div><!-- 2 row Ends -->
+                </div><!-- Fim de 2 linhas -->
 
     <?php
 
@@ -131,7 +128,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_cat) {
 
-            echo "<script> alert('New Category Has Been Inserted')</script>";
+            echo "<script> alert('Nova categoria foi inserida')</script>";
 
             echo "<script> window.open('index.php?view_cats','_self') </script>";
         }

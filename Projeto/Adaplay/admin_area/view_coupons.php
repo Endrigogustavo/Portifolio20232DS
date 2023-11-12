@@ -9,66 +9,65 @@ if (!isset($_SESSION['admin_email'])) {
 
 ?>
 
-    <div class="row"><!-- 1 row Starts -->
+    <div class="row"><!-- 1 linha começa -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / View Coupons
+                    <i class="fa fa-dashboard"></i> Dashboard / Ver Cupons
 
                 </li>
 
-            </ol><!-- breadcrumb Ends -->
+            </ol><!-- breadcrumb Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 1 row Ends -->
+    </div><!-- Fim de 1 linha -->
 
-    <div class="row"><!-- 2 row Starts -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-                <div class="panel-heading"><!-- panel-heading Starts -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
-                    <h3 class="panel-title"><!-- panel-title Starts -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
 
-                        <i class="fa fa-money fa-fw"></i> View Coupons
+                        <i class="fa fa-money fa-fw"></i> Ver Cupons
 
-                    </h3><!-- panel-title Ends -->
+                    </h3><!-- panel-title Termina -->
 
-                </div><!-- panel-heading Ends -->
+                </div><!-- cabeçalho do painel Termina -->
 
-                <div class="panel-body"><!-- panel-body Starts -->
+                <div class="panel-body"><!-- panel-body Inicia -->
 
-                    <div class="table-responsive"><!-- table-responsive Starts -->
+                    <div class="table-responsive"><!-- Início responsivo à tabela -->
 
-                        <table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
+                        <table class="table table-bordered table-hover table-striped">
+                            <!-- table table-bordered table-hover table-striped Inicia -->
 
-                            <thead><!-- thead Starts -->
+                            <thead><!-- thead Inicia -->
 
                                 <tr>
 
                                     <th>#</th>
-                                    <th>Title </th>
-                                    <th>Product </th>
-                                    <th>Coupon Price </th>
-                                    <th>Code </th>
-                                    <th>Limit </th>
-                                    <th>Used </th>
-                                    <th>Delete </th>
-                                    <th>Edit </th>
+                                    <th>Título </th>
+                                    <th>Produto </th>
+                                    <th>Preço do Cupom</th>
+                                    <th>Código </th>
+                                    <th>Limite </th>
+                                    <th>Utilizado </th>
+                                    <th>Deletar </th>
+                                    <th>Editar </th>
 
                                 </tr>
 
-                            </thead><!-- thead Ends -->
-
-                            <tbody><!-- tbody Starts -->
-
+                            </thead><!-- thead Termina -->
+                            <tbody><!-- tbody Inicia -->
                                 <?php
 
                                 $i = 0;
@@ -108,25 +107,39 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     <tr>
 
-                                        <td><?php echo $i; ?></td>
+                                        <td>
+                                            <?php echo $i; ?>
+                                        </td>
 
-                                        <td><?php echo $coupon_title; ?></td>
+                                        <td>
+                                            <?php echo $coupon_title; ?>
+                                        </td>
 
-                                        <td><?php echo $product_title; ?></td>
+                                        <td>
+                                            <?php echo $product_title; ?>
+                                        </td>
 
-                                        <td><?php echo "$$coupon_price"; ?></td>
+                                        <td>
+                                            <?php echo "R$$coupon_price"; ?>
+                                        </td>
 
-                                        <td><?php echo $coupon_code; ?></td>
+                                        <td>
+                                            <?php echo $coupon_code; ?>
+                                        </td>
 
-                                        <td><?php echo $coupon_limit; ?></td>
+                                        <td>
+                                            <?php echo $coupon_limit; ?>
+                                        </td>
 
-                                        <td><?php echo $coupon_used; ?></td>
+                                        <td>
+                                            <?php echo $coupon_used; ?>
+                                        </td>
 
                                         <td>
 
                                             <a href="index.php?delete_coupon=<?php echo $coupon_id; ?>">
 
-                                                <i class="fa fa-trash-o"></i> Delete
+                                                <i class="fa fa-trash-o"></i> Deletar
 
                                             </a>
 
@@ -136,7 +149,7 @@ if (!isset($_SESSION['admin_email'])) {
 
                                             <a href="index.php?edit_coupon=<?php echo $coupon_id; ?>">
 
-                                                <i class="fa fa-pencil"></i> Edit
+                                                <i class="fa fa-pencil"></i> Editar
 
                                             </a>
 
@@ -146,18 +159,18 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <?php } ?>
 
-                            </tbody><!-- tbody Ends -->
+                            </tbody><!-- tbody Termina -->
 
                         </table><!-- table table-bordered table-hover table-striped Ends -->
 
-                    </div><!-- table-responsive Ends -->
+                    </div><!-- Fim responsivo à tabela -->
 
-                </div><!-- panel-body Ends -->
+                </div><!-- painel-body Termina -->
 
-            </div><!-- panel panel-default Ends -->
+            </div><!-- painel panel-default Termina -->
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 2 row Ends -->
+    </div><!-- Fim de 2 linhas -->
 
 <?php } ?>

@@ -21,7 +21,7 @@ if (!isset($_SESSION['admin_email'])) {
 
         if ($run_delete) {
 
-            echo "<script>alert('One Product Category Has been Deleted')</script>";
+            echo "<script>alert('Uma categoria de produto foi excluída')</script>";
 
             echo "<script>window.open('index.php?view_p_cats','_self')</script>";
         }

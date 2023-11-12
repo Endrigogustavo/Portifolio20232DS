@@ -8,72 +8,72 @@ if (!isset($_SESSION['admin_email'])) {
 } else {
 
 ?>
+    <div class="row"><!-- 1 linha começa -->
 
-    <div class="row"><!-- 1 row Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
-
-            <ol class="breadcrumb"><!-- breadcrumb Starts -->
+            <ol class="breadcrumb"><!-- breadcrumb Inicia -->
 
                 <li class="active">
 
-                    <i class="fa fa-dashboard"></i> Dashboard / View Users
+                    <i class="fa fa-dashboard"></i> Dashboard / Ver Usuários
 
                 </li>
 
-            </ol><!-- breadcrumb Ends -->
+            </ol><!-- breadcrumb Termina -->
 
 
-        </div><!-- col-lg-12 Ends -->
+        </div><!-- col-lg-12 Termina -->
 
-    </div><!-- 1 row Ends -->
-
-
-    <div class="row"><!-- 2 row Starts -->
-
-        <div class="col-lg-12"><!-- col-lg-12 Starts -->
-
-            <div class="panel panel-default"><!-- panel panel-default Starts -->
-
-                <div class="panel-heading"><!-- panel-heading Starts -->
-
-                    <h3 class="panel-title"><!-- panel-title Starts -->
-
-                        <i class="fa fa-money fa-fw"></i> View Users
-
-                    </h3><!-- panel-title Ends -->
+    </div><!-- Fim de 1 linha -->
 
 
-                </div><!-- panel-heading Ends -->
+    <div class="row"><!-- Início de 2 linhas -->
 
-                <div class="panel-body"><!-- panel-body Starts -->
+        <div class="col-lg-12"><!-- col-lg-12 Inicia -->
 
-                    <div class="table-responsive"><!-- table-responsive Starts -->
+            <div class="panel panel-default"><!-- panel panel-default Inicia -->
 
-                        <table class="table table-bordered table-hover table-striped"><!-- table table-bordered table-hover table-striped Starts -->
+                <div class="panel-heading"><!-- panel-heading Inicia -->
 
-                            <thead><!-- thead Starts -->
+                    <h3 class="panel-title"><!-- panel-title Inicia -->
+
+                        <i class="fa fa-money fa-fw"></i> Ver Usuários
+
+                    </h3><!-- panel-title Termina -->
+
+
+                </div><!-- cabeçalho do painel Termina -->
+
+                <div class="panel-body"><!-- panel-body Inicia -->
+
+                    <div class="table-responsive"><!-- table-responsive Inicia -->
+
+                        <table class="table table-bordered table-hover table-striped">
+                            <!-- table table-bordered table-hover table-striped Inicia -->
+
+                            <thead><!-- thead Inicia -->
 
                                 <tr>
 
-                                    <th>User Name</th>
+                                    <th>Nome do Usuário</th>
 
                                     <th>Email</th>
 
-                                    <th>Image</th>
+                                    <th>Imagem</th>
 
-                                    <th>Country</th>
+                                    <th>País</th>
 
-                                    <th>Job</th>
+                                    <th>Emprego</th>
 
-                                    <th>Delete</th>
+                                    <th>Deletar</th>
 
 
                                 </tr>
 
-                            </thead><!-- thead Ends -->
+                            </thead><!-- thead Termina -->
 
-                            <tbody><!-- tbody Starts -->
+                            <tbody><!-- tbody Inicia -->
 
                                 <?php
 
@@ -103,21 +103,29 @@ if (!isset($_SESSION['admin_email'])) {
 
                                     <tr>
 
-                                        <td><?php echo $admin_name; ?></td>
+                                        <td>
+                                            <?php echo $admin_name; ?>
+                                        </td>
 
-                                        <td><?php echo $admin_email; ?></td>
+                                        <td>
+                                            <?php echo $admin_email; ?>
+                                        </td>
 
                                         <td><img src="admin_images/<?php echo $admin_image; ?>" width="60" height="60"></td>
 
-                                        <td><?php echo $admin_country; ?></td>
+                                        <td>
+                                            <?php echo $admin_country; ?>
+                                        </td>
 
-                                        <td><?php echo $admin_job; ?></td>
+                                        <td>
+                                            <?php echo $admin_job; ?>
+                                        </td>
 
                                         <td>
 
                                             <a href="index.php?user_delete=<?php echo $admin_id; ?>">
 
-                                                <i class="fa fa-trash-o"></i> Delete
+                                                <i class="fa fa-trash-o"></i> Deletar
 
                                             </a>
 
@@ -129,29 +137,29 @@ if (!isset($_SESSION['admin_email'])) {
 
                                 <?php } ?>
 
-                            </tbody><!-- tbody Ends -->
+                            </tbody><!-- tbody Termina -->
 
 
 
                         </table><!-- table table-bordered table-hover table-striped Ends -->
 
-                    </div><!-- table-responsive Ends -->
+                    </div><!-- Fim responsivo à tabela -->
 
 
-                </div><!-- panel-body Ends -->
+                </div><!-- painel-body Termina -->
 
 
-            </div><!-- panel panel-default Ends -->
+            </div><!-- painel panel-default Termina -->
 
 
-        </div><!-- col-lg-12 Ends -->
-
-
-
-    </div><!-- 2 row Ends -->
+        </div><!-- col-lg-12 Termina -->
 
 
 
+    </div><!-- Fim de 2 linhas -->
 
 
-<?php }  ?>
+
+
+
+<?php } ?>

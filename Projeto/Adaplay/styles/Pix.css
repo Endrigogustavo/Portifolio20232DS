@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    rgba(23, 125, 0.1) 0%,
+    rgba(204, 244, 209, 1) 49%,
+    rgba(131, 242, 160, 1) 58%,
+    rgba(23, 125, 0, 1) 100%
+  );
+}
+
+body {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  background-color: #eee;
+  padding-right: 50px;
+  height: 250px;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper.active {
+  height: 300px;
+}
+
+.wrapper.active .header h1 {
+  font-size: 2.5rem;
+}
+
+.header-form {
+  padding-left: 50px;
+  margin-right: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.wrapper .header h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.wrapper .header p {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.wrapper .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .form input {
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  height: 40px;
+  margin-bottom: 2rem;
+  border: none;
+  border-bottom: 0.1rem solid green;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper .form input::placeholder {
+  padding-left: 0.5rem;
+  color: black;
+}
+
+.wrapper .form button {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(74, 151, 97);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  cursor: pointer;
+}
+
+.wrapper .form button:hover {
+  border: 0.1rem solid rgb(74, 151, 97);
+  color: rgb(74, 151, 97);
+  background-color: transparent;
+  font-weight: bolder;
+}
+
+#btnPagar {
+  padding: 0px 116.6px; /* Espaçamento interno */
+  display: none; /* Inicialmente oculto */
+}
+
+#btnRetornar {
+  margin-top: 10px;
+  width: 267px;
+  display: none; /* Inicialmente oculto */
+}
+
+.wrapper .qr-code {
+  display: none;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  border: 1px solid #ccc;
+}
+
+.wrapper .qr-code img {
+  width: 170px;
+}
+
+.wrapper.active .qr-code {
+  display: block;
+  transition: all 0.5s 0.5s ease;
+}
+
+/* Mantenha o tamanho padrão até 768px */
+@media (max-width: 608px) {
+  .wrapper {
+    width: 100%; /* Ocupa a largura total */
+    padding: 0;
+  }
+
+  .wrapper.active {
+    height: auto; /* Altura automática para acomodar o conteúdo */
+  }
+
+  .wrapper.active .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .wrapper .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .wrapper .header p {
+    font-size: 1.6rem;
+  }
+
+  .wrapper .form input {
+    width: 100%;
+  }
+
+  .wrapper .form button {
+    width: 100%;
+  }
+
+  .wrapper .qr-code {
+    margin: 10px 0;
+  }
+}
+
+/* Tornar responsivo abaixo de 768px */
+@media (max-width: 608px) {
+  .wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .wrapper .header-form {
+    padding: 20px; /* Espaçamento para a esquerda e direita */
+    text-align: center;
+  }
+
+  .wrapper .form {
+    padding: 0 20px; /* Espaçamento para a esquerda e direita */
+  }
+}
+
+/* Mover o QrCode abaixo dos botões após 400px */
+@media (max-width: 400px) {
+  .wrapper .qr-code {
+    margin-top: 20px;
+  }
+
+  .wrapper .form button {
+    margin-top: 10px;
+  }
+}
